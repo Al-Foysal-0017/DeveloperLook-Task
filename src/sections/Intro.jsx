@@ -1,9 +1,11 @@
+import Container from "@/components/Container";
+
 const Intro = () => {
   return (
-    <section className="bg-background px-6 md:px-12 py-24 md:py-32">
-      <div className="max-w-6xl">
+    <Container className="bg-background py-24 md:py-32">
+      <div className=" ">
         {/* Main Bold Text */}
-        <h2 className="text-[1.5rem] md:text-[3rem] font-black leading-[1.1] tracking-tighter text-black uppercase mb-20">
+        <h2 className="max-w-6xl pl-0 md:pl-24 text-[1.5rem] md:text-[3.5rem] font-semibold leading-[1.1] tracking-tighter text-black mb-20">
           Wij maken content die opvalt. Die blijft hangen. Die jouw doelgroep raakt en jouw merk in beweging brengt. Snel, krachtig en energiek.
         </h2>
 
@@ -19,25 +21,34 @@ const Intro = () => {
             />
           </div>
 
-          {/* Right Side: Description and Button */}
-          <div className="max-w-xl self-end">
-            <p className="text-xl md:text-2xl font-bold leading-snug mb-8 text-black/90">
+          {/* Center Side: Description and Button */}
+          <div className="w-full self-end">
+            <p className="max-w-xl text-xl md:text-2xl font-semibold leading-snug mb-8 text-black/90">
               We stoppen niet bij mooie plaatjes en vette beelden. We maken het meetbaar. 
               Zo weet je precies wat werkt en wat niet. Nooit meer content zonder strategie. 
               Nooit meer content zonder resultaat.
             </p>
             
-            <button className="flex items-center gap-3 px-6 py-3 border-2 border-black rounded-full font-bold text-sm hover:bg-black hover:text-white transition-all duration-300 group">
+            <button className="flex items-center gap-3 px-1 py-1 border border-black rounded-xl font-semibold text-md hover:bg-black hover:text-white transition-all duration-300 group">
               Leer ons kennen 
-              <span className="w-6 h-6 bg-black text-white rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+              <span className="w-9 h-9 bg-black text-white rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
                 →
+              </span>
+            </button>
+          </div>
+
+          {/* Right Side: Only Button */}
+          <div className="w-full flex justify-center self-end">
+            <button className="flex items-center gap-3 px-1 py-1 border-2 border-black rounded-xl font-semibold text-md hover:bg-black hover:text-white transition-all duration-300 group">
+              <span style={{color:'#FA5425'}} className="w-9 h-9 rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+              ↓
               </span>
             </button>
           </div>
 
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 

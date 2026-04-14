@@ -118,7 +118,7 @@ const Hero = () => {
     <section className="relative pt-10 pb-20 md:px- overflow-hidden">
       {/* Main Headline */}
       <div className="max-w-4xl">
-        <h1 style={{fontWeight:"600"}} className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter text-black">
+        <h1 className="text-6xl md:text-8xl font-semibold leading-[0.9] tracking-tighter text-black">
           Get Hyped. Get <br /> Noticed. Get Results.
         </h1>
         <p className="mt-8 text-lg md:text-2xl font-medium text-black/80 max-w-sm">
