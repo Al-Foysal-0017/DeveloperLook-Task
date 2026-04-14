@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+body {
+  background-color: #F5F2EA;
+  color: #1A1A1A;
+  font-family: 'Inter', sans-serif; /* অথবা আপনার পছন্দের ফন্ট */
+}
