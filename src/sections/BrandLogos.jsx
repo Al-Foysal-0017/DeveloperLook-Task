@@ -1,3 +1,5 @@
+import Container from "@/components/Container";
+
 const logos = [
   { name: "Brand 1", url: "https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/69241146b4df63c4ca966552_Bullit%20Digital.svg" },
   { name: "Brand 2", url: "https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/68c194e6d1b186563459b107_morssinkhof.svg" },
@@ -23,41 +25,147 @@ const logos = [
   { name: "Brand 22", url: "https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/68c1952f22281ee50d3620b5_zclv.svg" },
 ];
 
-const BrandLogos = () => {
-  return (
-    <section className="py-20 bg-background border-y border-black/5 overflow-hidden">
-      <div className="flex flex-col gap-10">
-        <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-gray-400">
-          Trusted by the best
-        </p>
+// const BrandLogos = () => {
+//   return (
+//     <section className="py-20 bg-background border-y border-black/5 overflow-hidden">
+//       <div className="flex flex-col gap-10">
+//         <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-gray-400">
+//           Trusted by the best
+//         </p>
 
-        {/* Marquee Container */}
-        <div className="relative flex overflow-x-hidden">
-          <div className="flex animate-marquee whitespace-nowrap items-center">
+//         {/* Marquee Container */}
+//         <div className="relative flex overflow-x-hidden">
+//           <div className="flex animate-marquee whitespace-nowrap items-center">
+//             {/* First Set of Logos */}
+//             {logos.map((logo, index) => (
+//               <div key={index} className="mx-12 flex items-center justify-center">
+//                 {/* <span className="text-3xl md:text-5xl font-black text-black/20 uppercase hover:text-black transition-colors cursor-default">
+//                   {logo.name}
+//                 </span> */}
+//                 {/* যদি ইমেজ ব্যবহার করতে চান:  */}
+//                 <img src={logo.url} alt={logo.name} className="h-8 md:h-12 w-auto grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all" /> 
+               
+//               </div>
+//             ))}
+//             {/* Second Set of Logos (Duplicate for infinite loop) */}
+//             {logos.map((logo, index) => (
+//               <div key={`dup-${index}`} className="mx-12 flex items-center justify-center">
+//                 <span className="text-3xl md:text-5xl font-black text-black/20 uppercase hover:text-black transition-colors cursor-default">
+//                   {logo.name}
+//                 </span>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default BrandLogos;
+
+
+
+
+
+// export default function BrandLogos() {
+//   return (
+//     <section className="py-[5vw] bg-background border-y border-black/5 overflow-hidden">
+      
+//       <div className="flex flex-col gap-[3vw]">
+        
+//         {/* Title */}
+//         <p className="text-center text-[clamp(0.6rem,0.8vw,1rem)] font-black uppercase tracking-[0.3em] text-gray-400">
+//           Trusted by the best
+//         </p>
+
+//         {/* Marquee */}
+//         <div className="relative overflow-hidden">
+          
+//           <div className="flex animate-marquee whitespace-nowrap items-center">
+            
+//             {/* First Set */}
+//             {logos.map((logo, index) => (
+//               <div
+//                 key={index}
+//                 className="mx-[1vw] border flex items-center justify-center shrink-0"
+//               >
+//                 <img
+//                   src={logo.url}
+//                   alt={logo.name}
+//                   className="h-[clamp(6rem,12vw,14rem)] w-auto"
+//                 />
+//               </div>
+//             ))}
+
+//             {/* Duplicate Set */}
+//             {logos.map((logo, index) => (
+//               <div
+//                 key={`dup-${index}`}
+//                 className="mx-[2vw] flex items-center justify-center shrink-0"
+//               >
+//                 <img
+//                   src={logo.url}
+//                   alt={logo.name}
+//                   className="h-[clamp(5rem,10vw,8rem)] w-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+//                 />
+//               </div>
+//             ))}
+
+//           </div>
+
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
+
+
+export default function BrandLogos() {
+  return (
+    <section className="py-[5vw] bg-[#F5F2EA] overflow-hidden">
+      <div className="flex flex-col gap-[3vw]">
+        
+        {/* Title */}
+        <Container className="w-full">
+          <h1 className="text-[clamp(2.5rem,4vw,5rem)] font-semibold leading-[0.9] tracking-tighter text-black">
+            These brands <br />got hyped.
+          </h1>
+        </Container>
+
+        {/* Marquee Wrapper */}
+        <div className="relative overflow-hidden w-full">
+          {/* globals.css থেকে marquee-container ক্লাসটি এখানে ব্যবহার করা হয়েছে */}
+          <div className="marquee-container whitespace-nowrap items-center">
+            
             {/* First Set of Logos */}
             {logos.map((logo, index) => (
-              <div key={index} className="mx-12 flex items-center justify-center">
-                <span className="text-3xl md:text-5xl font-black text-black/20 uppercase hover:text-black transition-colors cursor-default">
-                  {logo.name}
-                </span>
-                {/* যদি ইমেজ ব্যবহার করতে চান: 
-                <img src={logo.url} alt={logo.name} className="h-8 md:h-12 w-auto grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all" /> 
-                */}
+              <div key={index} className="border border-black/9 rounded-xl mx-[0.4vw] flex items-center justify-center shrink-0">
+                <img
+                  src={logo.url}
+                  alt={logo.name}
+                  className="h-[clamp(6rem, 12vw, 14rem)] w-auto"
+                />
               </div>
             ))}
-            {/* Second Set of Logos (Duplicate for infinite loop) */}
+
+            {/* Duplicate Set for Seamless Loop */}
             {logos.map((logo, index) => (
-              <div key={`dup-${index}`} className="mx-12 flex items-center justify-center">
-                <span className="text-3xl md:text-5xl font-black text-black/20 uppercase hover:text-black transition-colors cursor-default">
-                  {logo.name}
-                </span>
+              <div key={`dup-${index}`} className="mx-[4vw] flex items-center justify-center shrink-0">
+                <img
+                  src={logo.url}
+                  alt={logo.name}
+                  className="h-[clamp(1.5rem,2.5vw,4rem)] w-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                />
               </div>
             ))}
+            
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default BrandLogos;
+}

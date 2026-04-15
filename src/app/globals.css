@@ -5,3 +5,22 @@ body {
   color: #1A1A1A;
   font-family: 'Inter', sans-serif; /* অথবা আপনার পছন্দের ফন্ট */
 }
+
+
+
+/* Custom Marquee Animation */
+@keyframes customMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  display: flex;
+  width: fit-content;
+  animation: customMarquee 30s linear infinite;
+}
+
+/* মাউস হোভার করলে থামানোর জন্য (ঐচ্ছিক) */
+.marquee-container:hover {
+  animation-play-state: paused;
+}

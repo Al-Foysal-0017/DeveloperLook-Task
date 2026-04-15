@@ -1,3 +1,4 @@
+"use client";
 import Card from '../components/Card';
 
 const expertisesData = [
@@ -46,7 +47,7 @@ const expertisesData = [
 const Expertises = () => {
   return (
     <section id="expertises" className="px-6 md:px-12 py-20 relative">
-      <div className="flex flex-col gap-0"> {/* Gap 0 রাখা হয়েছে কারণ কার্ডের মার্জিন স্ট্যাকিং কন্ট্রোল করবে */}
+      <div className="flex flex-col gap-0"> 
         {expertisesData.map((item, index) => (
           <Card 
             key={index}
