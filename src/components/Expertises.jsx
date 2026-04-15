@@ -18,7 +18,7 @@ const expertisesData = [
     description: "Van high-end video's tot snappy TikToks. Wij maken content die stopt met scrollen.",
     bgColor: "bg-brandPink",
     imgLink:"https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/6870f59d419ece22b50be1ae_visual.webp",
-    videoLink:"https://gethyped.b-cdn.net/MD/MD%20Loop%20Schaken.mp4",
+    videoLink:"https://gethyped.b-cdn.net/Expertises/Loop%20BTS%20comp.mp4",
     bgColor2:"#FCB8FA"
   },
   {
@@ -28,7 +28,7 @@ const expertisesData = [
     description: "Bereik de juiste mensen op het juiste moment. Wij zorgen voor maximale impact.",
     bgColor: "bg-brandGreen",
     imgLink:"https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/6870f59d419ece22b50be1ae_visual.webp",
-    videoLink:"https://gethyped.b-cdn.net/MD/MD%20Loop%20Schaken.mp4",
+    videoLink:"https://gethyped.b-cdn.net/Over%20de%20Top/overdetop-loop.mp4",
     bgColor2:"#32C791"
   },
   {
@@ -38,7 +38,7 @@ const expertisesData = [
     description: "Meten is weten. We optimaliseren continu voor het beste resultaat.",
     bgColor: "bg-brandBlue",
     imgLink:"https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/6870f59d419ece22b50be1ae_visual.webp",
-    videoLink:"https://gethyped.b-cdn.net/MD/MD%20Loop%20Schaken.mp4",
+    videoLink:"https://gethyped.b-cdn.net/Expertises/Data%20comp.mp4",
     bgColor2:"#0D8CFF"
   }
 ];

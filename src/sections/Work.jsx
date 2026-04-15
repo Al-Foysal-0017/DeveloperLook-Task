@@ -1,3 +1,4 @@
+import Container from '@/components/Container';
 import Button from '../components/Button';
 
 const projects = [
@@ -5,7 +6,8 @@ const projects = [
     id: 1,
     title: "Van nul naar vol, binnen 3 weken",
     client: "Bullit",
-    image: "/work-1.jpg", 
+    imageLink: "https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/69c3d06cc7a0b07e150a671d_Bullit%20branded%20placeholder_2.1.1.avif", 
+    videoLink:"https://gethyped.b-cdn.net/Bullit/Bullit%20%7C%20Loop.mp4",
     bgColor: "bg-[#FF5F2E]", // Orange
     borderColor: "border-[#FF5F2E]",
   },
@@ -13,7 +15,8 @@ const projects = [
     id: 2,
     title: "Zacht in smaak, sterk in beeld",
     client: "Roasta",
-    image: "/work-2.jpg",
+    imageLink: "https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/68716a54a3bf63bf25c2ae92_roasta-placeholder.avif",
+    videoLink:"https://gethyped.b-cdn.net/Roasta/roasta-loop.mp4",
     bgColor: "bg-[#2B87FF]", // Blue
     borderColor: "border-[#2B87FF]",
   },
@@ -21,7 +24,8 @@ const projects = [
     id: 3,
     title: "Content die écht smaakt (en raakt)",
     client: "Loco",
-    image: "/work-3.jpg",
+    imageLink: "https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/68716b4e8982337b1d3d1bd7_loco-loco-placeholder.avif",
+    videoLink:"https://gethyped.b-cdn.net/Loco/loco-bites-loop.mp4",
     bgColor: "bg-[#40C78E]", // Green
     borderColor: "border-[#40C78E]",
   }
@@ -29,7 +33,7 @@ const projects = [
 
 const Work = () => {
   return (
-    <section id="work" className="bg-[#F5F2EA] px-6 md:px-12 py-24">
+    <Container id="work" className="bg-[#F5F2EA] px-6 md:px-12 py-24">
       {/* Header Section */}
       <div className="max-w-4xl mb-16">
         <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] text-black">
@@ -50,12 +54,13 @@ const Work = () => {
       </div>
 
       {/* Grid Section - Masonry Style */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div className="border grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {projects.map((project, index) => (
           <div 
             key={project.id} 
-            className={`group relative overflow-hidden rounded-[2.5rem] border-[3px] ${project.borderColor} bg-white shadow-xl transition-all duration-500 hover:-translate-y-3 ${
-              index === 0 ? 'md:mt-24' : index === 1 ? 'md:mt-48' : 'md:mt-0' 
+            className={`max-w-sm group relative overflow-hidden rounded-[2.5rem] border-[8px] ${project.borderColor} bg-white shadow-xl transition-all duration-500 hover:-translate-y-3 ${
+              // index === 0 ? 'md:mt-24' : index === 1 ? 'md:mt-48' : 'md:mt-0' 
+              index === 0 ? 'md:mt-40' : index === 1 ? 'md:mt-20': index === 2 ? 'md:mt-0' : 'md:mt-0'
               /* স্ক্রিনশট অনুযায়ী কার্ডগুলোকে উঁচু-নিচু করার জন্য এই মার্জিন সেট করা হয়েছে */
             }`}
           >
@@ -87,7 +92,7 @@ const Work = () => {
           </div>
         ))}
       </div>
-    </section>
+    </Container>
   );
 };
 
