@@ -1,111 +1,3 @@
-// "use client";
-// import { useState } from "react";
-// import Image from 'next/image';
-// import Container from "@/components/Container";
-
-// const Hero = () => {
-//   const [loaded, setLoaded] = useState(false);
-//   const [loaded2, setLoaded2] = useState(false);
-//   return (
-//     <Container>
-//     <section className="relative pt-10 pb-20 md:px- overflow-hidden">
-//       {/* Main Headline */}
-//       <div className="max-w-4xl">
-//         <h1 style={{fontWeight:"600"}} className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter text-black">
-//           Get Hyped. Get <br /> Noticed. Get Results.
-//         </h1>
-//         <p className="mt-8 text-lg md:text-2xl font-medium text-black/80 max-w-sm">
-//           Klaar met gokken op content <br /> die niets oplevert?
-//         </p>
-//       </div>
-
-//       {/* Tilted Cards Container */}
-//       <div className="mt-16 flex flex-wrap md:flex-nowrap gap- justify-center items-end">
-        
-//         {/* Card 1: Blue (Organic views) */}
-//         <div style={{background:"#0D8CFF"}} className="relative w-full md:w-72 h-96 bg-brandBlue rounded-3xl p-6 flex flex-col justify-between -rotate-4 hover:rotate-0 transition-transform duration-300 shadow-xl z-10">
-//           <h3 className="text-5xl font-black text-black">10M+</h3>
-//           <div>
-//             <p className="font-bold text-lg">Organische views</p>
-//             <p className="text-sm">Groei door slimme content</p>
-//           </div>
-//         </div>
-
-//         {/* Card 2: Image Card (Woman) */}
-//         <div className="relative w-full md:w-72 h-96 rounded-3xl overflow-hidden rotate-4 hover:rotate-0 transition-transform duration-300 shadow-xl z-20 -ml-4">
-//           {/* Thumbnail Image */}
-//           {!loaded && (
-//             <img
-//               src="https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/69c40296636e683096701cda_video-thumb-01.avif"
-//               alt="thumbnail"
-//               className="absolute inset-0 w-full h-full object-cover"
-//             />
-//           )}
-
-//           {/* Video */}
-//           <video
-//             autoPlay
-//             loop
-//             muted
-//             playsInline
-//             onLoadedData={() => setLoaded(true)}
-//             className="w-full h-full object-cover"
-//           >
-//             <source
-//               src="https://gethyped.b-cdn.net/Salontopper/Loop%20Salontopper.mp4"
-//               type="video/mp4"
-//             />
-//           </video>
-//         </div>
-
-//         {/* Card 3: Green (Merken geholpen) */}
-//         <div style={{background:"#32C791"}} className="relative w-full md:w-72 h-96 bg-brandGreen rounded-3xl p-6 flex flex-col justify-between -rotate-4 hover:rotate-0 transition-transform duration-300 shadow-xl z-10 -ml-4">
-//           <h3 className="text-5xl font-black text-black">30+</h3>
-//           <div>
-//             <p className="font-bold text-lg">Merken geholpen</p>
-//             <p className="text-sm">Van start-up tot multinational</p>
-//           </div>
-//         </div>
-
-//         {/* Card 4: Video/Car Card */}
-//         <div className="relative w-full md:w-72 h-96 rounded-3xl overflow-hidden rotate-4 hover:rotate-0 transition-transform duration-300 shadow-xl z-20 -ml-4">
-//           {/* Thumbnail Image */}
-//           {!loaded2 && (
-//             <img
-//               src="https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/69c402fa5b2a05b98200d317_video-thumb-02.avif"
-//               alt="thumbnail"
-//               className="absolute inset-0 w-full h-full object-cover"
-//             />
-//           )}
-
-//           {/* Video */}
-//           <video
-//             autoPlay
-//             loop
-//             muted
-//             playsInline
-//             onLoadedData={() => setLoaded2(true)}
-//             className="w-full h-full object-cover"
-//           >
-//             <source
-//               src="https://gethyped.b-cdn.net/Petrol%20Head/petrolhead-loop.mp4"
-//               type="video/mp4"
-//             />
-//           </video>
-//           {/* <div className="absolute bottom-4 left-4 bg-black/20 backdrop-blur-sm px-3 py-1 rounded text-white font-bold text-xs uppercase">
-//             Carbon Dak.
-//           </div> */}
-//         </div>
-
-//       </div>
-//     </section>
-//     </Container>
-//   );
-// };
-
-// export default Hero;
-
-
 "use client";
 import { useState } from "react";
 import Container from "@/components/Container";
@@ -113,103 +5,93 @@ import Container from "@/components/Container";
 const Hero = () => {
   const [loaded, setLoaded] = useState(false);
   const [loaded2, setLoaded2] = useState(false);
+
   return (
     <Container>
-    <section className="relative pt-10 pb-20 md:px- overflow-hidden">
-      {/* Main Headline */}
-      <div className="max-w-4xl">
-        <h1 className="text-6xl md:text-8xl font-semibold leading-[0.9] tracking-tighter text-black">
-          Get Hyped. Get <br /> Noticed. Get Results.
-        </h1>
-        <p className="mt-8 text-lg md:text-2xl font-medium text-black/80 max-w-sm">
-          Klaar met gokken op content <br /> die niets oplevert?
-        </p>
-      </div>
-
-      {/* Tilted Cards Container */}
-      <div className="w-full mt-16 flex flex-wrap md:flex-nowrap gap- justify-center items-end">
-        
-        {/* Card 1: Blue (Organic views) */}
-        {/* width:"332px", */}
-        <div style={{background:"#0D8CFF", height:"432px", width:"25%", borderRadius:'48px'}} 
-        className="relative md:w-80 h-96 bg-brandBlue rounded-4xl p-7 flex flex-col justify-between -rotate-4 hover:rotate-0 transition-transform duration-300 shadow-xl z-10 -ml-4">
-          <h3 className="text-6xl font-semibold text-black">10M+</h3>
-          <div>
-            <p className="font-semibold text-2xl">Organische views</p>
-            <p className="text-sm">Groei door slimme content</p>
-          </div>
+      <section className="relative pt-[4vw] pb-[5vw] overflow-hidden">
+        {/* Main Headline */}
+        <div className="max-w-[90vw]">
+          <h1 className="text-[clamp(3rem,7vw,12rem)] font-semibold leading-[0.85] tracking-tighter text-black">
+            Get Hyped. Get <br /> Noticed. Get Results.
+          </h1>
+          <p className="mt-[2vw] text-[clamp(1.2rem,1.8vw,2.5rem)] font-medium max-w-md text-black/80 leading-snug">
+            Klaar met gokken op content <br /> die niets oplevert?
+          </p>
         </div>
 
-        {/* Card 2: Image Card (Woman) */}
-        <div style={{height:"432px", width:"25%",borderRadius:'48px'}} className="relative w-1/3 md:w-80 h-96 rounded-4xl overflow-hidden rotate-4 hover:rotate-0 transition-transform duration-300 shadow-xl z-20 -ml-4">
-          {/* Thumbnail Image */}
-          {!loaded && (
-            <img
-              src="https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/69c40296636e683096701cda_video-thumb-01.avif"
-              alt="thumbnail"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          )}
-
-          {/* Video */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            onLoadedData={() => setLoaded(true)}
-            className="w-full h-full object-cover"
+        {/* Tilted Cards Container */}
+        <div className="w-full mt-[5vw] flex flex-nowrap justify-center items-end gap-[4vw]">
+          
+          {/* Card 1: Blue */}
+          <div 
+            style={{ backgroundColor: "#0D8CFF" }}
+            className="relative w-[23vw] h-[32vw] min-h-[350px] max-h-[550px] rounded-[3vw] p-[2vw] flex flex-col justify-between -rotate-3 hover:rotate-0 transition-all duration-500 shadow-2xl z-10"
           >
-            <source
-              src="https://gethyped.b-cdn.net/Salontopper/Loop%20Salontopper.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-
-        {/* Card 3: Green (Merken geholpen) */}
-        <div style={{background:"#32C791", width:"25%",height:"432px", borderRadius:'48px'}} 
-        className="relative w-1/3 md:w-80 h-96 bg-brandGreen rounded-4xl p-6 flex flex-col justify-between -rotate-4 hover:rotate-0 transition-transform duration-300 shadow-xl z-20 -ml-4">
-          <h3 className="text-6xl font-semibold text-black">30+</h3>
-          <div>
-            <p className="font-semibold text-2xl">Merken geholpen</p>
-            <p className="text-sm">Van start-up tot multinational</p>
+            <h3 className="text-[4vw] font-semibold text-black leading-none uppercase">10M+</h3>
+            <div>
+              <p className="font-semibold text-[1.5vw] leading-tight">Organische views</p>
+              <p className="text-[1vw] ">Groei door slimme content</p>
+            </div>
           </div>
-        </div>
 
-        {/* Card 4: Video/Car Card */}
-        <div style={{height:"432px", width:"25%",borderRadius:'48px'}} className="relative w-1/3 md:w-80 h-96 rounded-4xl overflow-hidden  -rotate-4 hover:rotate-0 transition-transform duration-300 shadow-xl z-20 -ml-4">
-          {/* Thumbnail Image */}
-          {!loaded2 && (
-            <img
-              src="https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/69c402fa5b2a05b98200d317_video-thumb-02.avif"
-              alt="thumbnail"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          )}
+          {/* Card 2: Image/Video Card */}
+          <div className="relative w-[23vw] h-[32vw] min-h-[380px] max-h-[580px] rounded-[3vw] overflow-hidden rotate-3 hover:rotate-0 transition-all duration-500 shadow-2xl z-40 -ml-[4vw]">
+            {!loaded && (
+              <img
+                src="https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/69c40296636e683096701cda_video-thumb-01.avif"
+                alt="thumbnail"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            )}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              onLoadedData={() => setLoaded(true)}
+              className="w-full h-full object-cover"
+            >
+              <source src="https://gethyped.b-cdn.net/Salontopper/Loop%20Salontopper.mp4" type="video/mp4" />
+            </video>
+          </div>
 
-          {/* Video */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            onLoadedData={() => setLoaded2(true)}
-            className="w-full h-full object-cover"
+          {/* Card 3: Green */}
+          <div 
+            style={{ backgroundColor: "#32C791" }}
+            className="relative w-[23vw] h-[32vw] min-h-[350px] max-h-[550px] rounded-[3vw] p-[2vw] flex flex-col justify-between -rotate-6 hover:rotate-0 transition-all duration-500 shadow-2xl z-40 -ml-[4vw]"
           >
-            <source
-              src="https://gethyped.b-cdn.net/Petrol%20Head/petrolhead-loop.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
+            <h3 className="text-[4vw] font-semibold text-black leading-none uppercase">30+</h3>
+            <div>
+              <p className="font-semibold text-[1.5vw] leading-tight">Merken geholpen</p>
+              <p className="text-[1vw]">Van start-up tot multinational</p>
+            </div>
+          </div>
 
-      </div>
-    </section>
+          {/* Card 4: Video/Car Card */}
+          <div className="relative w-[23vw] h-[32vw] min-h-[380px] max-h-[580px] rounded-[3vw] overflow-hidden rotate-2 hover:rotate-0 transition-all duration-500 shadow-2xl z-50 -ml-[4vw]">
+            {!loaded2 && (
+              <img
+                src="https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/69c402fa5b2a05b98200d317_video-thumb-02.avif"
+                alt="thumbnail"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            )}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              onLoadedData={() => setLoaded2(true)}
+              className="w-full h-full object-cover"
+            >
+              <source src="https://gethyped.b-cdn.net/Petrol%20Head/petrolhead-loop.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+        </div>
+      </section>
     </Container>
   );
 };
 
 export default Hero;
-
-
