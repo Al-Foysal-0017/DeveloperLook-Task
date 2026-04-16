@@ -75,12 +75,16 @@
 
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import Hamburger from 'hamburger-react'
 import Container from "./Container";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <Container>
+      <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
       {/* py-[1.5vw]: প্যাডিং ভিউপোর্টের সাথে বাড়বে/কমবে। 
         sticky: স্ক্রল করার সময় নেভবার আটকে থাকার জন্য।
       */}
@@ -128,7 +132,7 @@ const Navbar = () => {
           {/* CTA Button - padding এবং rounded ও vw ইউনিটে */}
           <button 
             style={{ backgroundColor: "#FCB8FA" }} 
-            className="text-[clamp(0.7rem,1vw,1.1rem)] font-semibold pl-[1vw] pr-[0.3vw] py-[0.3vw] rounded-[1vw] flex items-center gap-[1vw] shadow-md hover:scale-105 transition-all group"
+            className="hidden md:flex text-[clamp(0.7rem,1vw,1.1rem)] font-semibold pl-[1vw] pr-[0.3vw] py-[0.3vw] rounded-[1vw] items-center gap-[1vw] shadow-md hover:scale-105 transition-all group"
           >
             Get Results 
             <span 
@@ -138,6 +142,13 @@ const Navbar = () => {
               🔥
             </span>
           </button>
+          {/* <button className="flex md:hidden" onClick={()=>setIsMenuOpen(!isMenuOpen)}>
+            Hamburger
+          </button> */}
+          <div className="flex md:hidden">
+          <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} />
+          </div>
+          
         </div>
       </nav>
     </Container>

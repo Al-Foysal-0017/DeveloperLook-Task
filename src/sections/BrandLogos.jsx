@@ -126,7 +126,7 @@ const logos = [
 
 export default function BrandLogos() {
   return (
-    <section className="py-[5vw] bg-[#F5F2EA] overflow-hidden">
+    <section className="py-[8vw] bg-[#F5F2EA] overflow-hidden">
       <div className="flex flex-col gap-[3vw]">
         
         {/* Title */}

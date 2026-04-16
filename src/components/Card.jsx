@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 const Card = ({ number, title, descriptionTitle, description, bgColor, bgColor2, imgLink, videoLink, textColor = "text-black" }) => {
@@ -27,7 +28,7 @@ const Card = ({ number, title, descriptionTitle, description, bgColor, bgColor2,
         <div>
           <div className="text-lg md:text-xl font-bold max-w-sm leading-snug">{descriptionTitle}</div>
           <p className="pt-3 text-md md:text-md max-w-sm leading-snug">{description}</p>
-          <button className="bg-white mt-4 flex items-center gap-2 px-1 py-1 rounded-xl font-semibold text-sm hover:bg-black hover:text-white transition-all duration-300 group">
+            <button className="bg-white mt-4 flex items-center gap-2 px-1 py-1 rounded-xl font-semibold text-sm hover:bg-black hover:text-white transition-all duration-300 group">
               Meer over {title} 
               <span className="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
                 →
@@ -46,7 +47,6 @@ const Card = ({ number, title, descriptionTitle, description, bgColor, bgColor2,
               className="absolute inset-0 w-full h-full object-cover"
             />
           )}
-
           {/* Video */}
           <video
             autoPlay

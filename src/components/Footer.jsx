@@ -17,9 +17,9 @@ const Footer = () => {
 
   return (
     <footer 
-      className="relative bg-[#F5F2EA] pt-32 overflow-hidden cursor-none"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className="h-screen relative bg-[#F5F2EA] pt- overflow-hidden cursor-none"
+      // onMouseEnter={() => setIsHovered(true)}
+      // onMouseLeave={() => setIsHovered(false)}
     >
       {/* --- 1. Custom Hover Label (GETHYPED) --- */}
       {isHovered && (
@@ -36,33 +36,82 @@ const Footer = () => {
       )}
 
       {/* --- 2. Main CTA Section --- */}
-      <div className="container mx-auto px-6 text-center pb-40 relative z-10">
-        <h2 className="text-7xl md:text-[10rem] font-black tracking-tighter text-black leading-none mb-12">
+      <div onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)} 
+      className="border-t-2 border-black/5 h-[60%] flex flex-col justify-end container mx-auto px-6 text-center relative z-10">
+        {/* <h2 className="text-7xl md:text-[7rem] font-bold tracking-tighter text-black leading-none ">
           Let&apos;s Get Hyped!
-        </h2>
-        
-        <div className="flex flex-wrap justify-center gap-4">
-          <button className="cursor-auto flex items-center gap-2 px-8 py-4 border-2 border-black rounded-full font-bold text-sm hover:bg-black hover:text-white transition-all">
+        </h2> */}
+        <h1 className="pb-6 text-[clamp(3rem,7vw,12rem)] font-semibold leading-[0.85] tracking-tighter text-black">
+          Let&apos;s Get Hyped!
+        </h1>
+        <div className="pb-4 flex flex-wrap justify-center gap-4">
+          {/* <button className="cursor-auto flex items-center gap-2 px-8 py-4 border-2 border-black rounded-full font-bold text-sm hover:bg-black hover:text-white transition-all">
             Mail ons direct <span>✉️</span>
-          </button>
-          <button className="cursor-auto flex items-center gap-2 px-8 py-4 bg-[#FF5F2E] text-white rounded-full font-bold text-sm hover:scale-105 transition-transform shadow-lg">
+          </button> */}
+            <button className="bg-white mt-4 flex items-center gap-2 px-1 py-1 rounded-xl font-semibold text-sm hover:bg-black hover:text-white transition-all duration-300 group">
+              Mail ons direct
+              <span className="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+              ✉️
+              </span>
+            </button>
+            <button className="bg-white mt-4 flex items-center gap-2 px-1 py-1 rounded-xl font-semibold text-sm hover:bg-black hover:text-white transition-all duration-300 group">
+            Get Results 
+              <span className="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+              🔥
+              </span>
+            </button>
+          {/* <button className="cursor-auto flex items-center gap-2 px-8 py-4 bg-[#FF5F2E] text-white rounded-full font-bold text-sm hover:scale-105 transition-transform shadow-lg">
             Get Results <span>🔥</span>
-          </button>
+          </button> */}
+          {/* <button 
+            style={{ backgroundColor: "#FCB8FA" }} 
+            className="text-[clamp(0.7rem,1vw,1.1rem)] font-semibold pl-[1vw] pr-[0.3vw] py-[0.vw] rounded-[1vw] flex items-center gap-[1vw] shadow-md hover:scale-105 transition-all group"
+          >
+            Get Results 
+            <span 
+              style={{ backgroundColor: "#fff" }} 
+              className="py-[0.6vw] px-[1vw] rounded-[1vw] group-hover:bg-black group-hover:text-white transition-colors"
+            >
+              🔥
+            </span>
+          </button> */}
         </div>
       </div>
 
       {/* --- 3. Slanted Bottom Bar Section --- */}
-      <div className="relative mt-20">
+      <div className=" relative">
         {/* ধূসর বাঁকানো ব্যাকগ্রাউন্ড (The Slanted Shape) */}
-        <div className="absolute inset-0 bg-[#EBE8DF] origin-bottom-left -skew-y-[3deg] transform translate-y-16 md:translate-y-24 h-[120%]"></div>
+        {/* <div className="absolute inset-0 bg-[#EBE8DF] origin-bottom-left -skew-y-[12deg] transform translate-y-16 md:translate-y-48 h-[120%]"></div> */}
+        <div className="mx-8 absolute inset-0 bg-[#EBE8DF] origin-bottom-left footer-skew transform translate-y-16 md:translate-y-48 h-[120%]"></div>
 
         {/* Footer Real Content */}
         <div className="relative z-20 pt-32 pb-12 px-6 md:px-12">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
             
             {/* Branding */}
-            <div className="text-5xl md:text-7xl font-black tracking-tighter text-black">
+            {/* <div className="text-5xl md:text-7xl font-black tracking-tighter text-black">
               GETHYPED
+            </div> */}
+            <div className="flex-shrink-0"> 
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 208 84"
+                className="w-[clamp(8rem,20vw,20rem)] h-auto"
+                fill="none"
+              >
+                {/* আপনার SVG পাথগুলো এখানে আগের মতোই থাকবে */}
+                <path d="M207.793 18.4091V68.8219C207.793 77.2049 200.998 84 192.615 84H7.46524C3.34207 84 0 80.6579 0 76.5348V37.5951C0 33.8732 2.69331 30.6933 6.36831 30.0829L186.384 0.251801C197.596 -1.60491 207.793 7.04266 207.793 18.4049" fill="#FAF4EC" />
+                <path d="M188.876 80.0646H55.9061V25.8317L186.618 5.34814C195.454 3.96521 203.444 10.7945 203.444 19.7408V65.4969C203.444 73.5427 196.922 80.0646 188.876 80.0646Z" fill="black" />
+                <path d="M71.2635 26.8177V47.2585L67.5415 47.5957V27.3683L59.9312 28.4866V76.7781L67.5415 76.7055V56.478L71.2635 56.2305V76.6714L79.3818 76.5945V25.6226L71.2635 26.8177Z" fill="white" />
+                <path d="M94.7092 23.3646L92.5452 42.7512L92.4427 44.4116L92.2378 44.4329L92.1354 42.7939L90.0055 24.0561L81.2256 25.3494L87.9482 58.2622V76.5134L96.8391 76.4323V57.75L104.142 21.9731L94.7092 23.3646Z" fill="white" />
+                <path d="M159.835 25.0207V13.7695L135.377 17.3719V76.0695L159.835 75.839V64.5921L147.179 65.0274V51.2238L159.101 50.4384V39.2854L147.179 40.3695V26.5701L159.835 25.0207Z" fill="white" />
+                <path d="M120.844 48.8506L116.226 49.2006V29.3018L120.844 28.7256V48.8506ZM105.943 21.7085V76.347L116.149 76.2488V58.5396L120.882 58.2878C127.071 57.9591 131.92 52.8457 131.92 46.6482V31.3805C131.92 24.2695 125.603 18.8146 118.565 19.8518L105.943 21.7128V21.7085Z" fill="white" />
+                <path d="M182.598 64.7713L176.494 64.9677V21.7768L182.598 21.0128V64.7713ZM162.993 13.3042V75.8091L185.769 75.5957C192.163 75.536 197.315 70.3372 197.315 63.9433V21.7469C197.315 14.636 190.998 9.18108 183.959 10.2183L162.989 13.3085L162.993 13.3042Z" fill="white" />
+                <path d="M21.5464 80.0646H34.7482V70.4738L27.1336 70.6957V59.8585L34.2873 59.4018V49.8835L27.1336 50.5494V39.7079L34.7482 38.739V29.1481L21.5464 31.214V80.0646Z" fill="black" />
+                <path d="M36.7714 28.828V38.4829L42.03 37.8128V80.0646H48.3812V37.0061L54.0239 36.289V26.1262L36.7714 28.828Z" fill="black" />
+                <path d="M14.2348 51.7488V41.2829L8.49394 42.0128V71.5152L14.2348 71.3488V62.6969L10.7092 62.8976V54.5146L19.5616 53.7634V80.0604H14.2391V77.3159L13.3128 78.225C12.1134 79.4031 10.5 80.0604 8.8226 80.0604H7.90491C5.48905 80.0604 3.53418 78.1012 3.53418 75.6896V39.0207C3.53418 36.1524 5.62563 33.7067 8.45978 33.2628L14.5165 32.3152C17.1671 31.9012 19.5659 33.95 19.5659 36.6305V51.2494L14.2433 51.7445L14.2348 51.7488Z" fill="black" />
+              </svg>
             </div>
 
             {/* Links & Info */}
@@ -125,3 +174,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+

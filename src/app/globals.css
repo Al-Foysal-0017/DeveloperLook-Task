@@ -17,10 +17,17 @@ body {
 .marquee-container {
   display: flex;
   width: fit-content;
-  animation: customMarquee 30s linear infinite;
+  animation: customMarquee 12s linear infinite;
 }
 
 /* মাউস হোভার করলে থামানোর জন্য (ঐচ্ছিক) */
 .marquee-container:hover {
   animation-play-state: paused;
+}
+
+
+/* Skew for footer */
+
+.footer-skew{
+  transform: skew(0deg, -8deg);
 }
