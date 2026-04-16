@@ -17,65 +17,44 @@ const Footer = () => {
 
   return (
     <footer 
-      className="h-screen relative bg-[#F5F2EA] pt- overflow-hidden cursor-none"
-      // onMouseEnter={() => setIsHovered(true)}
-      // onMouseLeave={() => setIsHovered(false)}
+      className="h-screen w-screen relative bg-[#F5F2EA] pt- overflow-hidden "
     >
       {/* --- 1. Custom Hover Label (GETHYPED) --- */}
       {isHovered && (
         <div 
-          className="fixed pointer-events-none z-[9999] px-4 py-2 bg-[#2B87FF] text-white rounded-full font-black text-xs uppercase tracking-tighter shadow-xl transition-transform duration-150 ease-out"
+          className="fixed pointer-events-none z-[9999] text-white rounded-full font-black text-xs uppercase tracking-tighter shadow-xl transition-transform duration-150 ease-out"
           style={{ 
             left: mousePos.x, 
             top: mousePos.y, 
             transform: "translate(-50%, -50%) rotate(-5deg)" 
           }}
         >
-          GETHYPED
+          <img src="https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/684c3404e57460370b97757c_7719b29e960423bac19acd325c901392_gh-logo-blue.svg" alt=""/>
         </div>
       )}
 
       {/* --- 2. Main CTA Section --- */}
-      <div onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)} 
-      className="border-t-2 border-black/5 h-[60%] flex flex-col justify-end container mx-auto px-6 text-center relative z-10">
-        {/* <h2 className="text-7xl md:text-[7rem] font-bold tracking-tighter text-black leading-none ">
-          Let&apos;s Get Hyped!
-        </h2> */}
+      <div 
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)} 
+        className="border-t-2 border-black/5 h-[60%] flex flex-col justify-end container mx-auto px-6 text-center relative z-10"
+      >
         <h1 className="pb-6 text-[clamp(3rem,7vw,12rem)] font-semibold leading-[0.85] tracking-tighter text-black">
           Let&apos;s Get Hyped!
         </h1>
         <div className="pb-4 flex flex-wrap justify-center gap-4">
-          {/* <button className="cursor-auto flex items-center gap-2 px-8 py-4 border-2 border-black rounded-full font-bold text-sm hover:bg-black hover:text-white transition-all">
-            Mail ons direct <span>✉️</span>
-          </button> */}
-            <button className="bg-white mt-4 flex items-center gap-2 px-1 py-1 rounded-xl font-semibold text-sm hover:bg-black hover:text-white transition-all duration-300 group">
+            <button className="border bg-white mt-4 flex items-center gap-2 px-1.5 py-1 rounded-xl font-semibold text-sm hover:bg-black hover:text-white transition-all duration-300 group">
               Mail ons direct
               <span className="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
               ✉️
               </span>
             </button>
-            <button className="bg-white mt-4 flex items-center gap-2 px-1 py-1 rounded-xl font-semibold text-sm hover:bg-black hover:text-white transition-all duration-300 group">
-            Get Results 
-              <span className="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+            <button style={{background:"#FA5425", borderColor:"#FA5425"}} className="border bg-white text-white mt-4 flex items-center gap-2 px-1.5 py-1 rounded-xl font-semibold text-sm hover:bg-black hover:text-white transition-all duration-300 group">
+              Get Results 
+              <span className="w-8 h-8 bg-white text-white rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
               🔥
               </span>
             </button>
-          {/* <button className="cursor-auto flex items-center gap-2 px-8 py-4 bg-[#FF5F2E] text-white rounded-full font-bold text-sm hover:scale-105 transition-transform shadow-lg">
-            Get Results <span>🔥</span>
-          </button> */}
-          {/* <button 
-            style={{ backgroundColor: "#FCB8FA" }} 
-            className="text-[clamp(0.7rem,1vw,1.1rem)] font-semibold pl-[1vw] pr-[0.3vw] py-[0.vw] rounded-[1vw] flex items-center gap-[1vw] shadow-md hover:scale-105 transition-all group"
-          >
-            Get Results 
-            <span 
-              style={{ backgroundColor: "#fff" }} 
-              className="py-[0.6vw] px-[1vw] rounded-[1vw] group-hover:bg-black group-hover:text-white transition-colors"
-            >
-              🔥
-            </span>
-          </button> */}
         </div>
       </div>
 
@@ -83,16 +62,11 @@ const Footer = () => {
       <div className=" relative">
         {/* ধূসর বাঁকানো ব্যাকগ্রাউন্ড (The Slanted Shape) */}
         {/* <div className="absolute inset-0 bg-[#EBE8DF] origin-bottom-left -skew-y-[12deg] transform translate-y-16 md:translate-y-48 h-[120%]"></div> */}
-        <div className="mx-8 absolute inset-0 bg-[#EBE8DF] origin-bottom-left footer-skew transform translate-y-16 md:translate-y-48 h-[120%]"></div>
+        <div className="mx-8 absolute inset-0 bg-[#EBE8DF] origin-bottom-left footer-skew rounded-t-3xl transform translate-y-16 md:translate-y-48 h-[120%]"></div>
 
         {/* Footer Real Content */}
         <div className="relative z-20 pt-32 pb-12 px-6 md:px-12">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
-            
-            {/* Branding */}
-            {/* <div className="text-5xl md:text-7xl font-black tracking-tighter text-black">
-              GETHYPED
-            </div> */}
             <div className="flex-shrink-0"> 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +74,6 @@ const Footer = () => {
                 className="w-[clamp(8rem,20vw,20rem)] h-auto"
                 fill="none"
               >
-                {/* আপনার SVG পাথগুলো এখানে আগের মতোই থাকবে */}
                 <path d="M207.793 18.4091V68.8219C207.793 77.2049 200.998 84 192.615 84H7.46524C3.34207 84 0 80.6579 0 76.5348V37.5951C0 33.8732 2.69331 30.6933 6.36831 30.0829L186.384 0.251801C197.596 -1.60491 207.793 7.04266 207.793 18.4049" fill="#FAF4EC" />
                 <path d="M188.876 80.0646H55.9061V25.8317L186.618 5.34814C195.454 3.96521 203.444 10.7945 203.444 19.7408V65.4969C203.444 73.5427 196.922 80.0646 188.876 80.0646Z" fill="black" />
                 <path d="M71.2635 26.8177V47.2585L67.5415 47.5957V27.3683L59.9312 28.4866V76.7781L67.5415 76.7055V56.478L71.2635 56.2305V76.6714L79.3818 76.5945V25.6226L71.2635 26.8177Z" fill="white" />
@@ -115,24 +88,25 @@ const Footer = () => {
             </div>
 
             {/* Links & Info */}
-            <div className="flex flex-col md:items-end gap-8 w-full md:w-auto">
+            <div className="flex flex-row md:items-end justify-between gap-8 md:w-aut">
               {/* Pill-style Navigation */}
-              <div className="flex flex-wrap gap-3 md:gap-5">
+              <div className="flex flex-col gap-3 md:gap-5">
+                <div className="flex gap-3">
                 {['Expertises', 'Work', 'About', 'Contact'].map((item) => (
                   <Link 
                     key={item} 
                     href={`#${item.toLowerCase()}`} 
-                    className="cursor-auto bg-white px-6 py-2.5 rounded-full text-sm font-bold shadow-sm hover:bg-black hover:text-white transition-all"
+                    className="cursor-auto bg-white px-3 py-2 rounded-xl text-sm font-medium shadow-sm hover:bg-black hover:text-white transition-all"
                   >
                     {item}
                   </Link>
                 ))}
-              </div>
+                </div>
 
-              {/* Socials & Contact Detail */}
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-10 w-full justify-between border-t border-black/5 pt-8">
                 <div className="flex items-center gap-4">
-                  <span className="font-bold text-[10px] uppercase text-gray-400 tracking-widest">Follow us</span>
+                  <span className="font-semibold text-[14px] ">
+                    Follow us
+                  </span>
                   <div className="flex gap-2">
                     {['in', 'tk', 'ig', 'yt'].map((social) => (
                       <div key={social} className="cursor-auto w-9 h-9 bg-white rounded-full flex items-center justify-center text-[10px] font-black shadow-sm hover:scale-110 transition-transform uppercase">
@@ -142,10 +116,30 @@ const Footer = () => {
                   </div>
                 </div>
 
-                <div className="text-left md:text-right font-bold">
-                  <p className="text-[10px] uppercase text-gray-400 mb-1">Contact</p>
-                  <p className="text-sm">info@gethyped.nl</p>
-                  <p className="text-sm text-gray-500">+31 6 1533 7498</p>
+                <div className="flex justify-between items-center gap-4">
+                  <span className="text-gray-600 text-[10px] ">
+                    @ 2025 Get Hyped
+                  </span>
+                  <span className="text-[10px] text-gray-600">
+                    @ Desiged by Al Foysal
+                  </span>
+                </div>
+              </div>
+
+              {/* Socials & Contact Detail */}
+              <div style={{width:"224px"}} className="flex flex-col items-start md:items-center gap- w-full justify-between">
+                <div className="">
+                  <p className="text-[14px] font-bold">Contact</p>
+                  <p className="text-[12px]">info@gethyped.nl</p>
+                  <p className="text-[12px]">+31 6 1533 7498</p>
+                </div>
+                <div className="mt-3">
+                  <p className="text-[14px] font-bold">Adres</p>
+                  <p className="text-[12px]">Beltrumsestraat 6,</p>
+                  <p className="text-[12px]">7141 AL Groenlo</p>
+                </div>
+                <div className="mt-5">
+                  <p className="text-gray-600 text-[10px]">Privacyvoorwaarden</p>
                 </div>
               </div>
             </div>
@@ -163,11 +157,42 @@ const Footer = () => {
         </div>
 
         {/* Floating Pink Badge (Rotating Circle) */}
-        <div className="absolute right-12 top-0 md:-top-10 w-24 h-24 bg-[#F2A1E2] rounded-full hidden md:flex items-center justify-center text-center p-3 shadow-xl rotate-12 z-30">
-           <p className="text-[9px] font-black leading-tight uppercase animate-spin-slow">
+        <div className="absolute right-12 top-0 md:-top-10 bg-[#F2A1E2] rounded-full hidden md:flex items-center justify-center text-center shadow-xl rotate-12 z-30">
+           {/* <p className="text-[9px] font-black leading-tight uppercase animate-spin-slow">
              Get Noticed • Get Results • Get Hyped •
-           </p>
+           </p> */}
+           
+           <div className="flex items-center justify-center">
+              <div className="relative flex items-center justify-center w-32 h-32 bg-[#f0b3ff] rounded-full shadow-lg overflow-hidden"> 
+                <div className="absolute w-full h-full animate-[spin_10s_linear_infinite]">
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    <defs>
+                      <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                    </defs>
+                    <text className="text-[10px] font-semibold uppercase fill-black">
+                      <textPath href="#circlePath">
+                        GET HYPED •• GET NOTICED •• GET RESULT ••
+                      </textPath>
+                    </text>
+                  </svg>
+                </div>
+
+                <div className="relative z-10 transform -rotate-12">
+                  <h1 className="-rotate-12 text-4xl font-bold tracking-tighter text-black select-none">
+                    GH
+                  </h1>
+                </div>
+                
+              </div>
+            </div>
+
+
+
+           {/* END */}
         </div>
+
+
+
       </div>
     </footer>
   );
