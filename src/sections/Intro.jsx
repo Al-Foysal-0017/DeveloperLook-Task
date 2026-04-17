@@ -61,9 +61,9 @@ import Container from "@/components/Container";
 const Intro = () => {
   return (
     <Container className="bg-[#F5F2EA] px-[5vw] py-[10vw] overflow-hidden">
-      <div className="max-w-[70%]">
+      <div className="">
         {/* Main Bold Text - text-[clamp(...)] ব্যবহার করা হয়েছে যেন জুম আউট করলেও নির্দিষ্ট সাইজের নিচে না নামে */}
-        <h2 className="text-[clamp(2.5rem,4vw,5rem)] font-semibold leading-[0.9] tracking-tighter text-black mb-[8vw]">
+        <h2 className="max-w-5xl pl-0 md:pl-24 text-[clamp(2.5rem,4vw,4rem)] md:text-[clamp(2.5rem,4vw,5rem)] font-semibold leading-[0.9] tracking-tighter text-black mb-[8vw]">
           Wij maken content die opvalt. Die blijft hangen. Die jouw doelgroep raakt en jouw merk in beweging brengt. Snel, krachtig en energiek.
         </h2>
 
@@ -79,8 +79,8 @@ const Intro = () => {
             />
           </div>
 
-          {/* Right Side: Description and Button */}
-          <div className="max-w-[45vw] self-end">
+          {/* Center Side: Description and Button */}
+          <div className="max-w-full md:max-w-[45vw] self-end">
             <p className="text-[clamp(1.1rem,1.8vw,2.5rem)] font-medium leading-[1.2] mb-[4vw] text-black/90">
               We stoppen niet bij mooie plaatjes en vette beelden. We maken het meetbaar. 
               Zo weet je precies wat werkt en wat niet. Nooit meer content zonder strategie. 
@@ -100,6 +100,16 @@ const Intro = () => {
                </span>
              </button> */}
           </div>
+
+          {/* Right Side: Only Button */}
+           <div className="hidden w-full md:flex justify-center self-end">
+             <button className="flex items-center gap-3 px-1 py-1 border-2 border-black rounded-xl font-semibold text-md hover:bg-black hover:text-white transition-all duration-300 group">
+               <span style={{color:'#FA5425'}} className="w-9 h-9 rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+               ↓
+               </span>
+             </button>
+           </div>
+
 
         </div>
       </div>

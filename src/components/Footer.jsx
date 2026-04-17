@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer 
-      className="h-screen w-screen relative bg-[#F5F2EA] pt- overflow-hidden "
+      className="h-screen w-screen relative bg-[#F5F2EA] overflow-hidden "
     >
       {/* --- 1. Custom Hover Label (GETHYPED) --- */}
       {isHovered && (
@@ -37,7 +37,7 @@ const Footer = () => {
       <div 
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)} 
-        className="border-t-2 border-black/5 h-[60%] flex flex-col justify-end container mx-auto px-6 text-center relative z-10"
+        className="border-t-2 border-black/5 h-auto md:h-[60%] flex flex-col justify-end container mx-auto px-6 text-center relative z-10"
       >
         <h1 className="pb-6 text-[clamp(3rem,7vw,12rem)] font-semibold leading-[0.85] tracking-tighter text-black">
           Let&apos;s Get Hyped!
@@ -88,7 +88,7 @@ const Footer = () => {
             </div>
 
             {/* Links & Info */}
-            <div className="flex flex-row md:items-end justify-between gap-8 md:w-aut">
+            <div className=" flex flex-col md:flex-row md:items-end justify-between gap-8 md:w-aut">
               {/* Pill-style Navigation */}
               <div className="flex flex-col gap-3 md:gap-5">
                 <div className="flex gap-3">
@@ -96,7 +96,7 @@ const Footer = () => {
                   <Link 
                     key={item} 
                     href={`#${item.toLowerCase()}`} 
-                    className="cursor-auto bg-white px-3 py-2 rounded-xl text-sm font-medium shadow-sm hover:bg-black hover:text-white transition-all"
+                    className="cursor-auto bg-white px-1 py-1 md:px-3 md:py-2 rounded-md md:rounded-xl text-[12px] md:text-sm font-medium shadow-sm hover:bg-black hover:text-white transition-all"
                   >
                     {item}
                   </Link>
@@ -116,7 +116,7 @@ const Footer = () => {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-center gap-4">
+                <div className="flex-wrap flex justify-between items-center gap-4">
                   <span className="text-gray-600 text-[10px] ">
                     @ 2025 Get Hyped
                   </span>
@@ -152,7 +152,7 @@ const Footer = () => {
               <span className="cursor-auto hover:text-black transition-colors">Privacy Policy</span>
               <span className="cursor-auto hover:text-black transition-colors">Terms of Service</span>
             </div>
-            <p>DESIGN BY DYLAN</p>
+            <p>DESIGN BY Al Foysal</p>
           </div>
         </div>
 
@@ -178,7 +178,7 @@ const Footer = () => {
                 </div>
 
                 <div className="relative z-10 transform -rotate-12">
-                  <h1 className="-rotate-12 text-4xl font-bold tracking-tighter text-black select-none">
+                  <h1 className=" -rotate-12 text-4xl font-bold tracking-tighter text-black select-none">
                     GH
                   </h1>
                 </div>

@@ -1,78 +1,3 @@
-// "use client";
-
-// import React from "react";
-// import Container from "./Container";
-
-// const Navbar = () => {
-//   return (
-//     <Container>
-//     <nav className="w-full py-4">
-//       <div style={{maxWidth:"1920px"}} className="flex items-center justify-between">
-        
-//         {/* Logo */}
-//         <div className="font-extrabold tracking-tight"> 
-//           <svg
-//             xmlns="http://www.w3.org/2000/svg"
-//             viewBox="0 0 208 84"
-//             className="w-36 h-auto"
-//             fill="none"
-//           >
-//             <path d="M207.793 18.4091V68.8219C207.793 77.2049 200.998 84 192.615 84H7.46524C3.34207 84 0 80.6579 0 76.5348V37.5951C0 33.8732 2.69331 30.6933 6.36831 30.0829L186.384 0.251801C197.596 -1.60491 207.793 7.04266 207.793 18.4049" fill="#FAF4EC" />
-            
-//             <path d="M188.876 80.0646H55.9061V25.8317L186.618 5.34814C195.454 3.96521 203.444 10.7945 203.444 19.7408V65.4969C203.444 73.5427 196.922 80.0646 188.876 80.0646Z" fill="black" />
-            
-//             <path d="M71.2635 26.8177V47.2585L67.5415 47.5957V27.3683L59.9312 28.4866V76.7781L67.5415 76.7055V56.478L71.2635 56.2305V76.6714L79.3818 76.5945V25.6226L71.2635 26.8177Z" fill="white" />
-            
-//             <path d="M94.7092 23.3646L92.5452 42.7512L92.4427 44.4116L92.2378 44.4329L92.1354 42.7939L90.0055 24.0561L81.2256 25.3494L87.9482 58.2622V76.5134L96.8391 76.4323V57.75L104.142 21.9731L94.7092 23.3646Z" fill="white" />
-            
-//             <path d="M159.835 25.0207V13.7695L135.377 17.3719V76.0695L159.835 75.839V64.5921L147.179 65.0274V51.2238L159.101 50.4384V39.2854L147.179 40.3695V26.5701L159.835 25.0207Z" fill="white" />
-            
-//             <path d="M120.844 48.8506L116.226 49.2006V29.3018L120.844 28.7256V48.8506ZM105.943 21.7085V76.347L116.149 76.2488V58.5396L120.882 58.2878C127.071 57.9591 131.92 52.8457 131.92 46.6482V31.3805C131.92 24.2695 125.603 18.8146 118.565 19.8518L105.943 21.7128V21.7085Z" fill="white" />
-            
-//             <path d="M182.598 64.7713L176.494 64.9677V21.7768L182.598 21.0128V64.7713ZM162.993 13.3042V75.8091L185.769 75.5957C192.163 75.536 197.315 70.3372 197.315 63.9433V21.7469C197.315 14.636 190.998 9.18108 183.959 10.2183L162.989 13.3085L162.993 13.3042Z" fill="white" />
-            
-//             <path d="M21.5464 80.0646H34.7482V70.4738L27.1336 70.6957V59.8585L34.2873 59.4018V49.8835L27.1336 50.5494V39.7079L34.7482 38.739V29.1481L21.5464 31.214V80.0646Z" fill="black" />
-            
-//             <path d="M36.7714 28.828V38.4829L42.03 37.8128V80.0646H48.3812V37.0061L54.0239 36.289V26.1262L36.7714 28.828Z" fill="black" />
-            
-//             <path d="M14.2348 51.7488V41.2829L8.49394 42.0128V71.5152L14.2348 71.3488V62.6969L10.7092 62.8976V54.5146L19.5616 53.7634V80.0604H14.2391V77.3159L13.3128 78.225C12.1134 79.4031 10.5 80.0604 8.8226 80.0604H7.90491C5.48905 80.0604 3.53418 78.1012 3.53418 75.6896V39.0207C3.53418 36.1524 5.62563 33.7067 8.45978 33.2628L14.5165 32.3152C17.1671 31.9012 19.5659 33.95 19.5659 36.6305V51.2494L14.2433 51.7445L14.2348 51.7488Z" fill="black" />
-//           </svg>
-//         </div>
-
-//         {/* Menu */}
-//         {/* <div className="hidden md:flex items-center gap-8 bg-white/60 backdrop-blur-md px-6 py-2 rounded-full shadow-sm"> */}
-//         <div className="md:flex items-center gap-6 bg-white/60 backdrop-blur-md px-4 py-3 rounded-xl shadow-sm">
-//           <a href="#" className="text-sm font-semibold hover:text-gray-600">
-//             Expertises
-//           </a>
-//           <a href="#" className="text-sm font-semibold hover:text-gray-600">
-//             Work
-//           </a>
-//           <a href="#" className="text-sm font-semibold hover:text-gray-600">
-//             About
-//           </a>
-//           <a href="#" className="text-sm font-semibold hover:text-gray-600">
-//             Contact
-//           </a>
-//         </div>
-
-//         {/* CTA Button */}
-//         <button style={{backgroundColor:"#FCB8FA"}} className="text-sm font-semibold px-1 py-1 rounded-xl flex items-center gap-2 shadow-md hover:scale-105 transition">
-//           Get Results <span style={{backgroundColor:"#fff"}} className="py-2 px-3 rounded-xl">🔥</span>
-//         </button>
-//       </div>
-//     </nav>
-//     </Container>
-//   );
-// };
-
-// export default Navbar;
-
-
-
-
-
-
 "use client";
 
 import React, { useState } from "react";
@@ -85,9 +10,6 @@ const Navbar = () => {
   return (
     <Container>
       <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
-      {/* py-[1.5vw]: প্যাডিং ভিউপোর্টের সাথে বাড়বে/কমবে। 
-        sticky: স্ক্রল করার সময় নেভবার আটকে থাকার জন্য।
-      */}
       <nav className="w-full py-[1.5vw] sticky top-0 z-50">
         <div 
           style={{ maxWidth: "100%" }} 
@@ -117,12 +39,12 @@ const Navbar = () => {
           </div>
 
           {/* Menu - px-[2vw] এবং rounded-[1.5vw] ব্যবহার করা হয়েছে */}
-          <div className="hidden md:flex items-center gap-[2vw] bg-white/60 backdrop-blur-md px-[1vw] py-[0.8vw] rounded-[1vw] shadow-sm border border-black/5">
+          <div className="hidden md:flex items-center bg-white/60 backdrop-blur-md rounded-[1vw] shadow-sm border border-black/5">
             {['Expertises', 'Work', 'About', 'Contact'].map((item) => (
               <a 
                 key={item} 
                 href="#" 
-                className="text-[clamp(0.8rem,1vw,1.2rem)] font-semibold hover:text-gray-500 transition-colors tracking-tight"
+                className="nav-item text-[clamp(0.8rem,1vw,1.2rem)] font-semibold hover:text-gray-500 transition-colors tracking-tight"
               >
                 {item}
               </a>
@@ -132,19 +54,16 @@ const Navbar = () => {
           {/* CTA Button - padding এবং rounded ও vw ইউনিটে */}
           <button 
             style={{ backgroundColor: "#FCB8FA" }} 
-            className="hidden md:flex text-[clamp(0.7rem,1vw,1.1rem)] font-semibold pl-[1vw] pr-[0.3vw] py-[0.3vw] rounded-[1vw] items-center gap-[1vw] shadow-md hover:scale-105 transition-all group"
+            className="buttonHover hidden md:flex text-[clamp(0.7rem,1vw,1.1rem)] font-semibold rounded-[1vw] hover:rounded-[0.5vw] pl-[1vw] pr-[0.3vw] py-[0.3vw] items-center gap-[1vw] shadow-md cursor-pointer transition-all group"
           >
             Get Results 
             <span 
               style={{ backgroundColor: "#fff" }} 
-              className="py-[0.6vw] px-[1vw] rounded-[1vw] group-hover:bg-black group-hover:text-white transition-colors"
+              className="py-[0.6vw] px-[1vw] rounded-[1vw] transition-colors"
             >
               🔥
             </span>
           </button>
-          {/* <button className="flex md:hidden" onClick={()=>setIsMenuOpen(!isMenuOpen)}>
-            Hamburger
-          </button> */}
           <div className="flex md:hidden">
           <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} />
           </div>

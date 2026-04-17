@@ -1,16 +1,11 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
 
 const Card = ({ number, title, descriptionTitle, description, bgColor, bgColor2, imgLink, videoLink, textColor = "text-black" }) => {
   const [loaded, setLoaded] = useState(false);
   return (
-    // <div style={{background:`${bgColor2}`}} className={`w-full min-h-[500px] md:min-h-[600px] ${bgColor} ${textColor} rounded-[2.5rem] p-8 md:p-16 flex flex-col justify-between sticky top-24 shadow-2xl mb-10`}>
     <div style={{background:`${bgColor2}`}} className={`w-full min-h-[500px] md:min-h-[600px] h-[85vh] ${bgColor} ${textColor} rounded-[2.5rem] p-8 md:p-16 flex flex-col justify-between sticky top-24 shadow-2xl mb-10`}>
       <div className="flex justify-between items-start">
-        {/* <span className="text-xl font-bold uppercase tracking-widest ">
-          {title}
-        </span> */}
         <div >
           <button className="bg-white mt-4 px-2 py-1 rounded-sm font-medium text-md ">
             Expertise
@@ -35,10 +30,7 @@ const Card = ({ number, title, descriptionTitle, description, bgColor, bgColor2,
               </span>
             </button>
         </div>
-        {/* <button className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center text-2xl hover:scale-110 transition-transform">
-          →
-        </button> */}
-        <div style={{height:"348px", width:"260px",borderRadius:'24px',borderColor:"#FA5425", }} className="border-6 relative w-1/3 md:w-80 h-96 rounded-4xl overflow-hidden rotate-4 hover:rotate-0 transition-transform duration-300 shadow-xl z-20 -ml-4">
+        <div style={{borderRadius:'24px',borderColor:"#FA5425", }} className="border-6 relative w-[16vw] h-[24vw] rounded-4xl overflow-hidden rotate-4 hover:rotate-0 transition-transform duration-300 shadow-xl z-20 -ml-4">
           {/* Thumbnail Image */}
           {!loaded && (
             <img
@@ -68,3 +60,7 @@ const Card = ({ number, title, descriptionTitle, description, bgColor, bgColor2,
 };
 
 export default Card;
+
+
+
+
