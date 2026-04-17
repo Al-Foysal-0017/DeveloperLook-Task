@@ -1,6 +1,5 @@
 "use client";
 import Container from '@/components/Container';
-import Button from '../components/Button';
 import { useState } from 'react';
 
 const projects = [
@@ -50,9 +49,9 @@ const Work = () => {
             Met creatieve content die werkt en het verschil maakt.
           </p>
           <div className="mt-[1vw]">
-            <button className="flex items-center gap-[1vw] px-[0.2vw] py-[0.2vw] border-[0.1vw] border-black rounded-xl font-semibold text-[clamp(0.8rem,1vw,1.2rem)] hover:bg-black hover:text-white transition-all group">
+            <button className="buttonHover flex items-center gap-[1vw] px-[0.2vw] py-[0.2vw] border-[0.1vw] border-black rounded-xl font-semibold text-[clamp(0.8rem,1vw,1.2rem)] transition-all group">
               Bekijk al ons werk 
-              <span className="bg-black text-white rounded-xl w-[2.5vw] h-[2.5vw] min-w-[30px] min-h-[30px] flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+              <span className="bg-black text-white rounded-xl w-[2.5vw] h-[2.5vw] min-w-[30px] min-h-[30px] flex items-center justify-center transition-colors">
                 →
               </span>
             </button>

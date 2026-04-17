@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer 
-      className="h-screen w-screen relative bg-[#F5F2EA] overflow-hidden "
+      className="h-auto md:h-screen flex flex-col justify-between w-screen relative bg-[#F5F2EA] overflow-hidden"
     >
       {/* --- 1. Custom Hover Label (GETHYPED) --- */}
       {isHovered && (
@@ -37,19 +37,20 @@ const Footer = () => {
       <div 
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)} 
-        className="border-t-2 border-black/5 h-auto md:h-[60%] flex flex-col justify-end container mx-auto px-6 text-center relative z-10"
+        // style={{height:"80vh"}}
+        className="border-t-4 h-[60%] border-black/5 flex flex-col justify-end container mx-auto px-6 text-center relative z-10"
       >
-        <h1 className="pb-6 text-[clamp(3rem,7vw,12rem)] font-semibold leading-[0.85] tracking-tighter text-black">
+        <h1 className="mt-[12vw] md:mt-0  pb-6 text-[clamp(3rem,7vw,12rem)] font-semibold leading-[0.85] tracking-tighter text-black">
           Let&apos;s Get Hyped!
         </h1>
         <div className="pb-4 flex flex-wrap justify-center gap-4">
-            <button className="border bg-white mt-4 flex items-center gap-2 px-1.5 py-1 rounded-xl font-semibold text-sm hover:bg-black hover:text-white transition-all duration-300 group">
+            <button className="border bg-white mt-4 flex items-center gap-2 px-1.5 py-1 rounded-xl font-semibold text-sm transition-all duration-300 group">
               Mail ons direct
               <span className="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
               ✉️
               </span>
             </button>
-            <button style={{background:"#FA5425", borderColor:"#FA5425"}} className="border bg-white text-white mt-4 flex items-center gap-2 px-1.5 py-1 rounded-xl font-semibold text-sm hover:bg-black hover:text-white transition-all duration-300 group">
+            <button style={{background:"#FA5425", borderColor:"#FA5425"}} className=" border bg-white text-white mt-4 flex items-center gap-2 px-1.5 py-1 rounded-xl font-semibold text-sm hover:bg-black hover:text-white transition-all duration-300 group">
               Get Results 
               <span className="w-8 h-8 bg-white text-white rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
               🔥
@@ -59,15 +60,15 @@ const Footer = () => {
       </div>
 
       {/* --- 3. Slanted Bottom Bar Section --- */}
-      <div className=" relative">
+      <div className="h-[40%] relative">
         {/* ধূসর বাঁকানো ব্যাকগ্রাউন্ড (The Slanted Shape) */}
         {/* <div className="absolute inset-0 bg-[#EBE8DF] origin-bottom-left -skew-y-[12deg] transform translate-y-16 md:translate-y-48 h-[120%]"></div> */}
         <div className="mx-8 absolute inset-0 bg-[#EBE8DF] origin-bottom-left footer-skew rounded-t-3xl transform translate-y-16 md:translate-y-48 h-[120%]"></div>
 
         {/* Footer Real Content */}
         <div className="relative z-20 pt-32 pb-12 px-6 md:px-12">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
-            <div className="flex-shrink-0"> 
+          <div className=" max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+            <div className="w-full md:w-fit flex justify-center flex-shrink-0"> 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 208 84"
@@ -88,7 +89,7 @@ const Footer = () => {
             </div>
 
             {/* Links & Info */}
-            <div className=" flex flex-col md:flex-row md:items-end justify-between gap-8 md:w-aut">
+            <div className=" w-full md:w-fit flex flex-col md:flex-row items-center md:items-end justify-between gap-8">
               {/* Pill-style Navigation */}
               <div className="flex flex-col gap-3 md:gap-5">
                 <div className="flex gap-3">
@@ -127,18 +128,18 @@ const Footer = () => {
               </div>
 
               {/* Socials & Contact Detail */}
-              <div style={{width:"224px"}} className="flex flex-col items-start md:items-center gap- w-full justify-between">
-                <div className="">
+              <div style={{width:"224px"}} className="flex flex-col items-center gap- w-full justify-between">
+                <div className="flex flex-col items-center md:items-start">
                   <p className="text-[14px] font-bold">Contact</p>
                   <p className="text-[12px]">info@gethyped.nl</p>
                   <p className="text-[12px]">+31 6 1533 7498</p>
                 </div>
-                <div className="mt-3">
-                  <p className="text-[14px] font-bold">Adres</p>
+                <div className="mt-3 flex flex-col items-center md:items-start">
+                  <p className="text-[14px] font-bold">Adress</p>
                   <p className="text-[12px]">Beltrumsestraat 6,</p>
                   <p className="text-[12px]">7141 AL Groenlo</p>
                 </div>
-                <div className="mt-5">
+                <div className="mt-5 flex flex-col items-center md:items-start">
                   <p className="text-gray-600 text-[10px]">Privacyvoorwaarden</p>
                 </div>
               </div>
@@ -146,7 +147,7 @@ const Footer = () => {
           </div>
 
           {/* Copyright Section */}
-          <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-black/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] font-black text-gray-400 uppercase tracking-[0.2em]">
+          <div className=" max-w-7xl mx-auto mt-20 pt-8 border-t border-black/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] font-black text-gray-400 uppercase tracking-[0.2em]">
             <p>© 2026 GET HYPED CLONE</p>
             <div className="flex gap-8">
               <span className="cursor-auto hover:text-black transition-colors">Privacy Policy</span>
@@ -158,11 +159,7 @@ const Footer = () => {
 
         {/* Floating Pink Badge (Rotating Circle) */}
         <div className="absolute right-12 top-0 md:-top-10 bg-[#F2A1E2] rounded-full hidden md:flex items-center justify-center text-center shadow-xl rotate-12 z-30">
-           {/* <p className="text-[9px] font-black leading-tight uppercase animate-spin-slow">
-             Get Noticed • Get Results • Get Hyped •
-           </p> */}
-           
-           <div className="flex items-center justify-center">
+           <div className=" flex items-center justify-center">
               <div className="relative flex items-center justify-center w-32 h-32 bg-[#f0b3ff] rounded-full shadow-lg overflow-hidden"> 
                 <div className="absolute w-full h-full animate-[spin_10s_linear_infinite]">
                   <svg viewBox="0 0 100 100" className="w-full h-full">
@@ -185,10 +182,6 @@ const Footer = () => {
                 
               </div>
             </div>
-
-
-
-           {/* END */}
         </div>
 
 
