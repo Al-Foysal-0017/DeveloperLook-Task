@@ -131,7 +131,7 @@ export default function BrandLogos() {
         
         {/* Title */}
         <Container className="w-full">
-          <h1 className="text-[clamp(2.5rem,4vw,5rem)] font-semibold leading-[0.9] tracking-tighter text-black">
+          <h1 className="text-[clamp(2rem,4vw,5rem)] font-semibold leading-[0.9] tracking-tighter text-black">
             These brands <br />got hyped.
           </h1>
         </Container>
@@ -143,11 +143,12 @@ export default function BrandLogos() {
             
             {/* First Set of Logos */}
             {logos.map((logo, index) => (
-              <div key={index} className="border border-black/9 rounded-xl mx-[0.4vw] flex items-center justify-center shrink-0">
+              <div key={index} className="border border-black/20 rounded-xl mx-[0.4vw] flex items-center justify-center shrink-0">
                 <img
                   src={logo.url}
                   alt={logo.name}
-                  className="h-[clamp(6rem, 12vw, 14rem)] w-auto"
+                  // className="h-[clamp(5rem, 12vw, 14rem)] w-auto"
+                  className="h-[16vw] sm:h-[18vw] md:h-[22vw] w-auto"
                 />
               </div>
             ))}

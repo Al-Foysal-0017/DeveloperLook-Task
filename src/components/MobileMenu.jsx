@@ -36,7 +36,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
         </div>
 
         {/* Close Button */}
-        <button className="w-[12vw] h-[12vw] min-w-[50px] min-h-[50px] bg-white rounded-[1.5vw] flex items-center justify-center hover:bg-gray-100 transition-colors">
+        <button className="w-[10vw] h-[10vw] min-w-[50px] min-h-[50px] bg-white rounded-[1.5vw] flex items-center justify-center hover:bg-gray-100 transition-colors">
             <Hamburger toggled={isOpen} toggle={setIsOpen} />
         </button>
       </div>
@@ -48,16 +48,16 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
             key={item}
             href={`#${item.toLowerCase()}`}
             onClick={() => setIsOpen(false)}
-            className="w-fit bg-white text-black p-[4vw] rounded-2xl text-[6vw] font-bold text-center shadow-sm border border-black/5 hover:scale-105 transition-transform"
+            className="w-fit bg-white text-black p-[3vw] text-[4vw] sm:p-[1vw] sm:text-[3vw] rounded-2xl font-bold text-center shadow-sm border border-black/5 hover:scale-105 transition-transform"
           >
             {item}
           </Link>
         ))}
 
         {/* Get Results Button with Fire Icon */}
-        <button className="mt-16 w-fit bg-black text-white p-[4vw] rounded-2xl text-[6vw] font-bold flex items-center justify-center gap-[2vw] hover:scale-105 transition-transform">
+        <button className="cursor-pointer mt-16 w-fit bg-black text-white rounded-2xl p-[3vw] text-[4vw] sm:p-[1vw] sm:text-[3vw] font-bold flex items-center justify-center gap-[2vw] hover:scale-105 transition-transform">
           Get Results
-          <span className="bg-white rounded-2xl w-[10vw] h-[10vw] flex items-center justify-center">
+          <span className="bg-white rounded-2xl sm:rounded-xl w-[10vw] h-[10vw] sm:w-[32px] sm:h-[32px] flex items-center justify-center">
             🔥
           </span>
         </button>
