@@ -25,9 +25,9 @@ const Card = ({ number, title, descriptionTitle, description, bgColor, bgColor2,
             {descriptionTitle}
           </div>
           <p className="pt-[1.5vw] text-[3vw] sm:text-[2vw] md:text-[1.2vw] text-md md:text-md max-w-sm leading-snug">{description}</p>
-            <button className="bg-white mt-4 flex items-center gap-2 px-1 py-1 rounded-xl font-medium md:font-semibold text-xs md:text-sm hover:bg-black hover:text-white transition-all duration-300 group">
+            <button className="buttonHover bg-white mt-4 flex items-center gap-2 px-1 py-1 rounded-xl font-medium md:font-semibold text-xs md:text-sm transition-all duration-300 group">
               Meer over {title} 
-              <span className="w-6 h-6 md:w-8 md:h-8 bg-black text-white rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+              <span className="w-6 h-6 md:w-8 md:h-8 bg-black text-white rounded-lg flex items-center justify-center transition-colors">
                 →
               </span>
             </button>

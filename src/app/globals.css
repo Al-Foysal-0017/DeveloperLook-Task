@@ -120,3 +120,66 @@ body {
   transition: color 0.1s ease 0.35s; 
 }
 
+
+
+
+
+
+
+
+
+/* Container styling to manage siblings */
+.card-container {
+  display: flex;
+  gap: 2vw; /* জুম-প্রুফ গ্যাপ */
+  align-items: center;
+  justify-content: center;
+  padding: 5vw;
+}
+
+/* Base Card Style */
+.cardHover {
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  /* cursor: pointer; */
+  position: relative;
+  /* width: 20vw;  */
+  /* height: 28vw;  */
+  filter: grayscale(0) brightness(1);
+  transform-origin: center center;
+}
+
+/* 1. হোভার করলে কার্ডটি বড় হবে এবং সামনের দিকে আসবে */
+.cardHover:hover {
+  transform: scale(1.1) rotate(0deg) translateY(-1vw);
+  z-index: 50;
+  filter: brightness(1.05);
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+/* 2. যেকোনো একটি কার্ড হোভার করলে বাকি সব কার্ড আবছা (Blur) হয়ে যাবে */
+.card-container:has(.cardHover:hover) .cardHover:not(:hover) {
+  filter: blur(4px) brightness(0.8) grayscale(0.2);
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+/* 3. জুম-আউটে যেন লেখা বা আইকন নষ্ট না হয় তার জন্য রেসপন্সিভ সেটিংস */
+/* @media (max-width: 768px) {
+  .cardHover {
+    width: 40vw;
+    height: 60vw;
+  }
+} */
+
+
+
+
+
+
+@media (max-width: 800px) {
+  .footerHeight {
+    height: 100%;
+  }
+}

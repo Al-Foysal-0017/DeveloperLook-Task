@@ -25,7 +25,7 @@ const Hero = () => {
           {/* Card 1: Blue */}
           <div 
             style={{ backgroundColor: "#0D8CFF" }}
-            className="relative w-[35vw] sm:w-[26vw] md:w-[23vw] h-[32vw] min-h-[350px] max-h-[550px] rounded-[3vw] p-[2vw] flex flex-col justify-between -rotate-3 hover:rotate-0 transition-all duration-500 z-10"
+            className="cardHeight cardHover relative w-[35vw] sm:w-[26vw] md:w-[23vw] h-[32vw] min-h-[350px] max-h-[580px] rounded-[3vw] p-[2vw] flex flex-col justify-between -rotate-3 hover:rotate-0 transition-all duration-500 z-10"
           >
             <h3 className="text-[4vw] font-semibold text-black leading-none uppercase">10M+</h3>
             <div>
@@ -35,7 +35,7 @@ const Hero = () => {
           </div>
 
           {/* Card 2: Image/Video Card */}
-          <div className="relative w-[35vw] sm:w-[26vw] md:w-[23vw] h-[32vw] min-h-[350px] max-h-[580px] rounded-[3vw] overflow-hidden rotate-3 hover:rotate-0 transition-all duration-500 z-40 -ml-[4vw]">
+          <div className="cardHover relative w-[35vw] sm:w-[26vw] md:w-[23vw] h-[32vw] min-h-[350px] max-h-[580px] rounded-[3vw] overflow-hidden rotate-3 hover:rotate-0 transition-all duration-500 z-40 -ml-[4vw]">
             {!loaded && (
               <img
                 src="https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/69c40296636e683096701cda_video-thumb-01.avif"
@@ -58,7 +58,7 @@ const Hero = () => {
           {/* Card 3: Green */}
           <div 
             style={{ backgroundColor: "#32C791" }}
-            className="hidden sm:flex flex-col justify-between  relative w-[35vw] sm:w-[26vw] md:w-[23vw] h-[32vw] min-h-[350px] max-h-[550px] rounded-[3vw] p-[2vw] -rotate-6 hover:rotate-0 transition-all duration-500 z-40 -ml-[4vw]"
+            className="cardHover hidden sm:flex flex-col justify-between  relative w-[35vw] sm:w-[26vw] md:w-[23vw] h-[32vw] min-h-[350px] max-h-[550px] rounded-[3vw] p-[2vw] -rotate-6 hover:rotate-0 transition-all duration-500 z-40 -ml-[4vw]"
           >
             <h3 className="text-[4vw] font-semibold text-black leading-none uppercase">30+</h3>
             <div>
@@ -68,7 +68,7 @@ const Hero = () => {
           </div>
 
           {/* Card 4: Video/Car Card */}
-          <div className="hidden md:flex relative w-[35vw] sm:w-[26vw] md:w-[23vw] h-[32vw] min-h-[350px] max-h-[580px] rounded-[3vw] overflow-hidden rotate-2 hover:rotate-0 transition-all duration-500 z-50 -ml-[4vw]">
+          <div className="cardHover hidden md:flex relative w-[35vw] sm:w-[26vw] md:w-[23vw] h-[32vw] min-h-[350px] max-h-[580px] rounded-[3vw] overflow-hidden rotate-2 hover:rotate-0 transition-all duration-500 z-50 -ml-[4vw]">
             {!loaded2 && (
               <img
                 src="https://cdn.prod.website-files.com/6848603da8e6ac95794b7498/69c402fa5b2a05b98200d317_video-thumb-02.avif"

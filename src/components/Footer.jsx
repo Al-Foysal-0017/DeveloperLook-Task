@@ -41,7 +41,7 @@ const Footer = () => {
         className="border-t-4 h-[60%] border-black/5 flex flex-col justify-end container mx-auto px-6 text-center relative z-10"
       >
         <h1 className="mt-[12vw] md:mt-0  pb-6 text-[clamp(3rem,7vw,12rem)] font-semibold leading-[0.85] tracking-tighter text-black">
-          Let&apos;s Get Hyped!
+          <div>Let&apos;s Get Hyped!</div>
         </h1>
         <div className="pb-4 flex flex-wrap justify-center gap-4">
             <button className="border bg-white mt-4 flex items-center gap-2 px-1.5 py-1 rounded-xl font-semibold text-sm transition-all duration-300 group">
@@ -60,7 +60,7 @@ const Footer = () => {
       </div>
 
       {/* --- 3. Slanted Bottom Bar Section --- */}
-      <div className="h-[40%] relative">
+      <div className="h-[40% footerHeight relative">
         {/* ধূসর বাঁকানো ব্যাকগ্রাউন্ড (The Slanted Shape) */}
         {/* <div className="absolute inset-0 bg-[#EBE8DF] origin-bottom-left -skew-y-[12deg] transform translate-y-16 md:translate-y-48 h-[120%]"></div> */}
         <div className="mx-8 absolute inset-0 bg-[#EBE8DF] origin-bottom-left footer-skew rounded-t-3xl transform translate-y-16 md:translate-y-48 h-[120%]"></div>
