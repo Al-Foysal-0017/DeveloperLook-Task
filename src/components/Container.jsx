@@ -1,7 +1,7 @@
 export default function Container({ children, className = "" }) {
     return (
-      <div style={{maxWidth:'1920px ', paddingLeft:'32px', paddingRight:'32px'}} className={` 
-          mx-auto ${className}`}>
+      <div className={` 
+          mx-auto max-w-[1920px] px-3 sm:px-5 md:px-8 ${className}`}>
         {children}
       </div>
     );

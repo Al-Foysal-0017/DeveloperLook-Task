@@ -143,20 +143,10 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          {/* Copyright Section */}
-          <div className=" max-w-7xl mx-auto mt-20 pt-8 border-t border-black/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] font-black text-gray-400 uppercase tracking-[0.2em]">
-            <p>© 2026 GET HYPED CLONE</p>
-            <div className="flex gap-8">
-              <span className="cursor-auto hover:text-black transition-colors">Privacy Policy</span>
-              <span className="cursor-auto hover:text-black transition-colors">Terms of Service</span>
-            </div>
-            <p>DESIGN BY Al Foysal</p>
-          </div>
         </div>
 
         {/* Floating Pink Badge (Rotating Circle) */}
-        <div className="absolute right-12 top-0 md:-top-2 xl:-top-10 2xl:-top-20 bg-[#F2A1E2] rounded-full hidden md:flex items-center justify-center text-center shadow-xl rotate-12 z-30">
+        <div className="absolute right-12 top-0  xl:-top-10 2xl:-top-20 bg-[#F2A1E2] rounded-full hidden md:flex items-center justify-center text-center shadow-xl rotate-12 z-30">
            <div className=" flex items-center justify-center">
               <div className="relative flex items-center justify-center w-32 h-32 bg-[#f0b3ff] rounded-full shadow-lg overflow-hidden"> 
                 <div className="absolute w-full h-full animate-[spin_10s_linear_infinite]">
@@ -181,8 +171,6 @@ const Footer = () => {
               </div>
             </div>
         </div>
-
-
 
       </div>
     </footer>
