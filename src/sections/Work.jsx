@@ -62,49 +62,54 @@ const Work = () => {
         <div style={{marginTop:"-64px"}} className="grid grid-cols-1 md:grid-cols-3 gap-[3vw] items-start">
           {projects.map((project, index) => (
             <div 
-              key={project.id} 
-              className={`relative overflow-hidden rounded-[3vw] border-[0.6vw] ${project.borderColor} bg-white shadow-2xl transition-all duration-500 hover:-translate-y-4 ${
-                index === 0 ? 'md:mt-[10vw]' : index === 1 ? 'md:mt-[5vw]' : 'md:mt-0'
-              }`}
-            >
-              {/* Project Image/Video Container */}
-              <div className="aspect-[4/5] overflow-hidden relative">
-                {!loaded && (
-                  <img
-                    src={project.imageLink}
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                )} 
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  onLoadedData={() => setLoaded(true)}
-                  className="w-full h-full object-cover"
-                >
-                  <source src={project.videoLink} type="video/mp4" />
-                </video>
-              </div>
+            key={project.id} 
+            className={`group relative overflow-hidden rounded-[3vw] border-[0.6vw] ${project.borderColor} bg-white shadow-2xl transition-all duration-500 hover:-rotate-3 cursor-pointer ${
+              index === 0 ? 'md:mt-[10vw]' : index === 1 ? 'md:mt-[5vw]' : 'md:mt-0'
+            }`}
+          >
+            {/* Project Image/Video Container */}
+            <div className="aspect-[4/5] overflow-hidden relative">
+              <img
+                src={project.imageLink}
+                alt={project.title}
+                className="absolute inset-0 w-full h-full object-cover z-20 transition-opacity duration-500 group-hover:opacity-0"
+              />
 
-              {/* Floating Info Box - জুম করলেও এর সাইজ ও ফন্ট স্থির থাকবে */}
-              <div className={`absolute bottom-[1vw] left-[1vw] right-[1vw] p-[1.8vw] ${project.bgColor} rounded-[2.5vw] text-white shadow-lg`}>
-                <div className="flex justify-between items-start gap-[1vw]">
-                  <h3 className="text-[clamp(1rem,1.6vw,2.2rem)] font-black leading-tight uppercase">
-                    {project.title}
-                  </h3>
-                  <div className="bg-white text-black w-[3vw] h-[3vw] min-w-[35px] min-h-[35px] rounded-full flex items-center justify-center shrink-0 shadow-md">
-                    <span className="rotate-[-45deg] font-black text-[1.2vw]">→</span>
-                  </div>
-                </div>
-                <div className="mt-[1vw]">
-                  <span className="text-[clamp(0.6rem,0.8vw,1rem)] font-black uppercase tracking-widest bg-black/10 px-[1vw] py-[0.4vw] rounded-[0.8vw]">
-                    {project.client}
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover z-10"
+              >
+                <source src={project.videoLink} type="video/mp4" />
+              </video>
+            </div>
+
+            {/* Floating Info Box */}
+            <div className={`absolute bottom-[1vw] left-[1vw] right-[1vw] p-[1.8vw] ${project.bgColor} rounded-[2.5vw] text-white shadow-lg z-30`}>
+              <div className="flex justify-between items-start gap-[1vw]">
+                <h3 className="text-[clamp(1rem,1.6vw,2.2rem)] font-black leading-tight uppercase">
+                  {project.title}
+                </h3>
+
+                <div className="relative overflow-hidden bg-white text-black w-[3vw] h-[3vw] min-w-[35px] min-h-[35px] rounded-full flex items-center justify-center shrink-0 shadow-md">
+                  <span className="absolute rotate-[-45deg] font-black text-[1.2vw] transition-all duration-500 ease-in-out group-hover:translate-x-[2vw] group-hover:translate-y-[-2vw] group-hover:opacity-0">
+                    →
+                  </span>
+                  <span className="absolute rotate-[-45deg] font-black text-[1.2vw] translate-x-[-2vw] translate-y-[2vw] opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+                    →
                   </span>
                 </div>
               </div>
+
+              <div className="mt-[1vw]">
+                <span className="text-[clamp(0.6rem,0.8vw,1rem)] font-black uppercase tracking-widest bg-black/10 px-[1vw] py-[0.4vw] rounded-[0.8vw]">
+                  {project.client}
+                </span>
+              </div>
             </div>
+          </div>
           ))}
         </div>
       </section>
