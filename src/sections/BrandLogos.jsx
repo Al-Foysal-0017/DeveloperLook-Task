@@ -48,7 +48,6 @@ export default function BrandLogos() {
                 <img
                   src={logo.url}
                   alt={logo.name}
-                  // className="h-[clamp(5rem, 12vw, 14rem)] w-auto"
                   className="h-[20vw] sm:h-[21vw] md:h-[22vw] w-auto"
                 />
               </div>

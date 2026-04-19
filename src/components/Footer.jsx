@@ -6,7 +6,6 @@ const Footer = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-  // মাউসের পজিশন ট্র্যাক করার জন্য
   useEffect(() => {
     const handleMove = (e) => {
       setMousePos({ x: e.clientX, y: e.clientY });
@@ -40,7 +39,7 @@ const Footer = () => {
         // style={{height:"80vh"}}
         className="border-t-4 h-[60%] border-black/5 flex flex-col justify-end container mx-auto px-6 text-center relative z-10"
       >
-        <h1 className="mt-[12vw] md:mt-0  pb-6 text-[clamp(3rem,7vw,12rem)] font-semibold leading-[0.85] tracking-tighter text-black">
+        <h1 className="mt-[12vw] md:mt-0 pt-4 pb-6 text-[clamp(3rem,7vw,12rem)] font-semibold leading-[0.85] tracking-tighter text-black">
           <div>Let&apos;s Get Hyped!</div>
         </h1>
         <div className="pb-4 flex flex-wrap justify-center gap-4">
@@ -61,14 +60,13 @@ const Footer = () => {
 
       {/* --- 3. Slanted Bottom Bar Section --- */}
       <div className="h-[40% footerHeight relative">
-        {/* ধূসর বাঁকানো ব্যাকগ্রাউন্ড (The Slanted Shape) */}
-        {/* <div className="absolute inset-0 bg-[#EBE8DF] origin-bottom-left -skew-y-[12deg] transform translate-y-16 md:translate-y-48 h-[120%]"></div> */}
         <div className="mx-8 absolute inset-0 bg-[#EBE8DF] origin-bottom-left footer-skew rounded-t-3xl transform translate-y-16 md:translate-y-48 h-[120%]"></div>
 
         {/* Footer Real Content */}
         <div className="relative z-20 pt-32 pb-12 px-6 md:px-12">
-          <div className=" max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
-            <div className="w-full md:w-fit flex justify-center flex-shrink-0"> 
+          {/* <div className="max-w-7x mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12"> */}
+          <div className=" footer-flex max-w-7x mx-auto  gap-12">
+            <div className=" w-full md:w-fit flex justify-center flex-shrink-0"> 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 208 84"
@@ -158,7 +156,7 @@ const Footer = () => {
         </div>
 
         {/* Floating Pink Badge (Rotating Circle) */}
-        <div className="absolute right-12 top-0 md:-top-10 bg-[#F2A1E2] rounded-full hidden md:flex items-center justify-center text-center shadow-xl rotate-12 z-30">
+        <div className="absolute right-12 top-0 md:-top-2 xl:-top-10 2xl:-top-20 bg-[#F2A1E2] rounded-full hidden md:flex items-center justify-center text-center shadow-xl rotate-12 z-30">
            <div className=" flex items-center justify-center">
               <div className="relative flex items-center justify-center w-32 h-32 bg-[#f0b3ff] rounded-full shadow-lg overflow-hidden"> 
                 <div className="absolute w-full h-full animate-[spin_10s_linear_infinite]">

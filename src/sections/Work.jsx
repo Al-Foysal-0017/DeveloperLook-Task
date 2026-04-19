@@ -64,7 +64,6 @@ const Work = () => {
             <div 
               key={project.id} 
               className={`relative overflow-hidden rounded-[3vw] border-[0.6vw] ${project.borderColor} bg-white shadow-2xl transition-all duration-500 hover:-translate-y-4 ${
-                // জুম আউটে পজিশন ঠিক রাখতে vw ব্যবহার
                 index === 0 ? 'md:mt-[10vw]' : index === 1 ? 'md:mt-[5vw]' : 'md:mt-0'
               }`}
             >

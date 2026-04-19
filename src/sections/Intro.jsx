@@ -38,14 +38,29 @@ const Intro = () => {
           </div>
 
           {/* Right Side: Only Button */}
-           <div className="hidden w-full md:flex justify-center self-end">
+           {/* <div className="hidden w-full md:flex justify-center self-end">
              <button className="cursor-pointer flex items-center gap-3 px-1 py-1 border-2 border-black rounded-xl font-semibold text-md transition-all duration-300 group">
                <span style={{color:'#FA5425'}} className="w-9 h-9 rounded-lg flex items-center justify-center  transition-colors">
                ↓
                </span>
              </button>
-           </div>
-
+           </div> */}
+           <div className="hidden w-full md:flex justify-center self-end">
+              <button className="relative overflow-hidden cursor-pointer flex items-center justify-center w-[3.5vw] h-[3.5vw] min-w-[50px] min-h-[50px] border-[0.15vw] border-black rounded-[1vw] transition-all duration-300 group">
+                <span 
+                  style={{ color: '#FA5425' }} 
+                  className="absolute text-[1.5vw] font-bold transition-transform duration-500 ease-in-out group-hover:translate-y-[3vw]"
+                >
+                  ↓
+                </span>
+                <span 
+                  style={{ color: '#FA5425' }} 
+                  className="absolute text-[1.5vw] font-bold -translate-y-[3vw] transition-transform duration-500 ease-in-out group-hover:translate-y-0"
+                >
+                  ↓
+                </span>
+              </button>
+            </div>
 
         </div>
       </div>

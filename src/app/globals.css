@@ -3,46 +3,65 @@
 body {
   background-color: #F5F2EA;
   color: #1A1A1A;
-  font-family: 'Inter', sans-serif; /* অথবা আপনার পছন্দের ফন্ট */
+  font-family: 'Inter', sans-serif;
 }
 
 
-
-/* Custom Marquee Animation */
-@keyframes customMarquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* Nav Design */
+.nav-item {
+  text-decoration: none;
+  color: black;
+  padding: 1vw 1.5vw;
+  border-radius: 15px; 
+  position: relative; 
+  overflow: hidden; 
+  display: inline-block;
+  z-index: 1;
+  cursor: pointer;
+}
+.nav-item::before {
+  content: '';
+  position: absolute;
+  bottom: -100%; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff5722; 
+  border-radius: 15px;
+  transition: bottom 0.2s ease; 
+  z-index: -2; 
+}
+.nav-item::after {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a; 
+  border-radius: 15px;
+  transform: translateY(100%); 
+  transition: transform 0.2s ease 0.25s; 
+  z-index: -1; 
+}
+.nav-item:hover::before {
+  bottom: 0;
+}
+.nav-item:hover::after {
+  transform: translateY(0%);
+}
+.nav-item:hover {
+  color: white;
+  transition: color 0.1s ease 0.35s; 
 }
 
-.marquee-container {
-  display: flex;
-  width: fit-content;
-  animation: customMarquee 12s linear infinite;
-}
 
-/* মাউস হোভার করলে থামানোর জন্য (ঐচ্ছিক) */
-.marquee-container:hover {
-  animation-play-state: paused;
-}
-
-
-/* Skew for footer */
-
-.footer-skew{
-  transform: skew(0deg, -8deg);
-}
-
-
-
-
-/* rounded-[1vw] hover:rounded-[0.5vw] */
 /* Button Hover Effect */
 .buttonHover {
   transition: transform 0.3s ease;
   border-radius: 0.8vw;
   cursor: pointer;
 }
-
 .buttonHover:hover {
   transform: rotate(-7deg);
   border-top-right-radius: 0.3vw;
@@ -50,94 +69,14 @@ body {
 }
 
 
-
-
-/* px-[1vw] py-[0.8vw] */
-/* প্রতিটি মেনু আইটেমের বেসিক স্টাইল */
-.nav-item {
-  text-decoration: none;
-  color: black;
-  padding: 1vw 1.5vw;
-  border-radius: 15px; /* রাউন্ডেড কর্নার */
-  position: relative; /* সিউডো-এলিমেন্টের পজিশনের জন্য জরুরি */
-  overflow: hidden; /* ভেতরের এনিমেশন যেন বাইরে না যায় */
-  display: inline-block;
-  z-index: 1;
-  cursor: pointer;
-}
-
-/* ১. কমলা রঙের স্লাইড-আপ এলিমেন্ট (::before) */
-.nav-item::before {
-  content: '';
-  position: absolute;
-  bottom: -100%; /* শুরুতে এটি আইটেমের নিচে লুকিয়ে থাকবে */
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ff5722; /* কমলা কালার */
-  border-radius: 15px;
-  transition: bottom 0.2s ease; /* উপরে উঠার এনিমেশন */
-  z-index: -2; /* সবকিছুর নিচে থাকবে */
-}
-
-/* ২. কালো রঙের স্লাইড-আপ এলিমেন্ট (::after) */
-.nav-item::after {
-  content: '';
-  position: absolute;
-  top: 0; /* আমরা 'top' দিয়ে পজিশন করছি কিন্তু 'transform' দিয়ে সরাচ্ছি */
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #1a1a1a; /* কালো কালার */
-  border-radius: 15px;
-  
-  /* নতুন পরিবর্তন: এটি শুরুতে নিচ থেকে ১০০% নিচে থাকবে */
-  transform: translateY(100%); 
-  
-  /* এনিমেশন ২.৫ সেকেন্ড দেরি করে শুরু হবে এবং ০.৩ সেকেন্ড চলবে */
-  transition: transform 0.2s ease 0.25s; 
-  
-  z-index: -1; /* কমলা রঙের উপরে কিন্তু টেক্সটের নিচে */
-}
-
-/* ৩. হোভার এফেক্টস */
-
-/* হোভার করলে কমলা রঙ উপরে উঠবে */
-.nav-item:hover::before {
-  bottom: 0;
-}
-
-/* হোভার করলে কালো ব্যাকগ্রাউন্ড নিচ থেকে উপরে উঠবে */
-.nav-item:hover::after {
-  /* নতুন পরিবর্তন: হোভারে এটি এর আসল জায়গায় ফিরে আসবে */
-  transform: translateY(0%);
-}
-
-/* হোভার করলে টেক্সট কালার সাদা হবে (দেরি করে) */
-.nav-item:hover {
-  color: white;
-  /* কালো ব্যাকগ্রাউন্ড আসার সাথে সাথে টেক্সট সাদা হবে */
-  transition: color 0.1s ease 0.35s; 
-}
-
-
-
-
-
-
-
-
-
-/* Container styling to manage siblings */
+/* Hero Section Card Style */
 .card-container {
   display: flex;
-  gap: 2vw; /* জুম-প্রুফ গ্যাপ */
+  gap: 2vw; 
   align-items: center;
   justify-content: center;
   padding: 5vw;
 }
-
-/* Base Card Style */
 .cardHover {
   transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   /* cursor: pointer; */
@@ -147,8 +86,6 @@ body {
   filter: grayscale(0) brightness(1);
   transform-origin: center center;
 }
-
-/* 1. হোভার করলে কার্ডটি বড় হবে এবং সামনের দিকে আসবে */
 .cardHover:hover {
   transform: scale(1.1) rotate(0deg) translateY(-1vw);
   z-index: 50;
@@ -157,15 +94,12 @@ body {
   margin-left: 16px;
   margin-right: 16px;
 }
-
-/* 2. যেকোনো একটি কার্ড হোভার করলে বাকি সব কার্ড আবছা (Blur) হয়ে যাবে */
 .card-container:has(.cardHover:hover) .cardHover:not(:hover) {
   filter: blur(4px) brightness(0.8) grayscale(0.2);
   transform: scale(0.95);
   opacity: 0.7;
 }
 
-/* 3. জুম-আউটে যেন লেখা বা আইকন নষ্ট না হয় তার জন্য রেসপন্সিভ সেটিংস */
 /* @media (max-width: 768px) {
   .cardHover {
     width: 40vw;
@@ -174,8 +108,40 @@ body {
 } */
 
 
+/* Custom Marquee Animation */
+@keyframes customMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-container {
+  display: flex;
+  width: fit-content;
+  animation: customMarquee 12s linear infinite;
+}
+.marquee-container:hover {
+  animation-play-state: paused;
+}
 
 
+/* Skew for footer */
+.footer-skew{
+  transform: skew(0deg, -8deg);
+}
+/* flex flex-col md:flex-row justify-between items-start md:items-end */
+.footer-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+
+@media (max-width: 1000px) {
+  .footer-flex{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 
 @media (max-width: 800px) {
