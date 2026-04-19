@@ -13,7 +13,7 @@ const Navbar = () => {
       <nav className="w-full py-[1.5vw] sticky top-0 z-50">
         <div 
           style={{ maxWidth: "100%" }} 
-          className="flex items-center justify-between"
+          className="flex items-center justify-between cursor-pointer"
         >
           
           {/* Logo - w-[clamp(8rem,12vw,15rem)]: লোগো কখনোই ৮ রেম এর ছোট হবে না */}
@@ -37,19 +37,37 @@ const Navbar = () => {
               <path d="M14.2348 51.7488V41.2829L8.49394 42.0128V71.5152L14.2348 71.3488V62.6969L10.7092 62.8976V54.5146L19.5616 53.7634V80.0604H14.2391V77.3159L13.3128 78.225C12.1134 79.4031 10.5 80.0604 8.8226 80.0604H7.90491C5.48905 80.0604 3.53418 78.1012 3.53418 75.6896V39.0207C3.53418 36.1524 5.62563 33.7067 8.45978 33.2628L14.5165 32.3152C17.1671 31.9012 19.5659 33.95 19.5659 36.6305V51.2494L14.2433 51.7445L14.2348 51.7488Z" fill="black" />
             </svg>
           </div>
-
-          {/* Menu - px-[2vw] এবং rounded-[1.5vw] ব্যবহার করা হয়েছে */}
-          <div className="hidden md:flex items-center bg-white/60 backdrop-blur-md rounded-[1vw] shadow-sm border border-black/5">
+          
+          {/* MENU */}
+          <div className="hidden md:flex items-center bg-white/60 backdrop-blur-md rounded-[0.5vw] overflow-hidden shadow-none border-none">
             {['Expertises', 'Work', 'About', 'Contact'].map((item) => (
               <a 
                 key={item} 
-                href="#" 
-                className="nav-item text-[clamp(0.8rem,1vw,1.2rem)] font-semibold hover:text-gray-500 transition-colors tracking-tight"
+                href={`#${item.toLowerCase()}`} 
+                className="group relative overflow-hidden px-[1.5vw] py-[1vw] text-[clamp(0.8rem,1vw,1.2rem)] font-medium tracking-tight transition-all duration-500"
               >
-                {item}
+                {/* --- Background Slide Effect --- */}
+                <div className="absolute inset-0 bg-black translate-y-[101%] transition-transform duration-500 ease-in-out group-hover:translate-y-0 z-0">
+                  
+                  <div className="absolute top-0 left-0 w-full h-[0.2vw] bg-[#FA5425] transition-opacity duration-300 delay-300 group-hover:opacity-0" />
+                </div>
+
+                {/* --- Rolling Text Effect --- */}
+                <div className="relative flex flex-col overflow-hidden h-[1.2em] z-10">
+                  {/* Original Text (Black) */}
+                  <span className="inline-block transition-transform duration-500 ease-in-out group-hover:-translate-y-full text-black">
+                    {item}
+                  </span>
+                  
+                  {/* New Text (White) */}
+                  <span className="absolute top-full left-0 inline-block transition-transform duration-500 ease-in-out group-hover:-translate-y-full text-white">
+                    {item}
+                  </span>
+                </div>
               </a>
             ))}
           </div>
+
 
           {/* CTA Button - padding এবং rounded ও vw ইউনিটে */}
           <button 
@@ -65,7 +83,7 @@ const Navbar = () => {
             </span>
           </button>
           <div className="flex md:hidden">
-          <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} />
+            <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} />
           </div>
           
         </div>

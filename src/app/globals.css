@@ -7,55 +7,6 @@ body {
 }
 
 
-/* Nav Design */
-.nav-item {
-  text-decoration: none;
-  color: black;
-  padding: 1vw 1.5vw;
-  border-radius: 15px; 
-  position: relative; 
-  overflow: hidden; 
-  display: inline-block;
-  z-index: 1;
-  cursor: pointer;
-}
-.nav-item::before {
-  content: '';
-  position: absolute;
-  bottom: -100%; 
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ff5722; 
-  border-radius: 15px;
-  transition: bottom 0.2s ease; 
-  z-index: -2; 
-}
-.nav-item::after {
-  content: '';
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #1a1a1a; 
-  border-radius: 15px;
-  transform: translateY(100%); 
-  transition: transform 0.2s ease 0.25s; 
-  z-index: -1; 
-}
-.nav-item:hover::before {
-  bottom: 0;
-}
-.nav-item:hover::after {
-  transform: translateY(0%);
-}
-.nav-item:hover {
-  color: white;
-  transition: color 0.1s ease 0.35s; 
-}
-
-
 /* Button Hover Effect */
 .buttonHover {
   transition: transform 0.3s ease;
